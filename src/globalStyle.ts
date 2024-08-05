@@ -1,7 +1,9 @@
 import { createGlobalStyle } from 'styled-components'
 
 export const colors = {
-    white: '#fff'
+    white: '#fff',
+    purple: '#2b0b39',
+    purpleLight: '#9047e5'
 }
 
 const Global = createGlobalStyle`

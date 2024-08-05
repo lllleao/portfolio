@@ -1,3 +1,4 @@
+import NavBar from './components/Aside'
 import Main from './containers/Main'
 import Global from './globalStyle'
 
@@ -6,6 +7,7 @@ function App() {
         <>
             <Global />
             <Main />
+            <NavBar />
         </>
     )
 }

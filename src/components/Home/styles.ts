@@ -14,7 +14,7 @@ export const HeroContainer = styled.section`
 export const Hero = styled.div`
     display: flex;
     height: 100%;
-    gap: 144px;
+    gap: 122px;
     align-items: center;
 
     @media (max-width: 767px) {
