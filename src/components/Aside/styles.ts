@@ -6,7 +6,7 @@ type Props = {
 }
 export const Aside = styled.aside<Props>`
     position: fixed;
-    top: 10%;
+    top: 5%;
     right: 5%;
     background-color: ${colors.purpleLight};
     padding: 8px;
