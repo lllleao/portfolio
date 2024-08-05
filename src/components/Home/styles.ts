@@ -10,6 +10,9 @@ export const HeroContainer = styled.section`
     @media (max-height: 459px) and (min-width: 768px) {
         height: 100%;
     }
+    @media (max-width: 767px) {
+        height: 100svh;
+    }
 `
 export const Hero = styled.div`
     display: flex;
