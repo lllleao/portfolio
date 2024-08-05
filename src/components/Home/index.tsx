@@ -1,5 +1,5 @@
 import * as S from './styles'
-import avatar from '../../assets/Perfil.png'
+import avatar from '../../assets/perfil-fundo.png'
 import Slider from '../Slider'
 
 const Home = () => {
