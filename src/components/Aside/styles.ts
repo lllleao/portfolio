@@ -22,7 +22,7 @@ export const Aside = styled.aside<Props>`
 
             color: #fff;
             padding: 8px;
-            font-size: 22px;
+            font-size: 16px;
             &:nth-child(2) {
                 margin: 22px 0;
             }
