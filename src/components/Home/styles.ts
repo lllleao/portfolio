@@ -19,12 +19,9 @@ export const Hero = styled.div`
 
     @media (max-width: 767px) {
         flex-direction: column;
+        justify-content: center;
         gap: 32px;
     }
-
-    /* @media (max-height: 703px) and (min-width: 768px) {
-        height: max-content;
-    } */
 `
 export const Profile = styled.div`
     padding: 16px;
@@ -33,7 +30,6 @@ export const Profile = styled.div`
         width: 100%;
     }
     @media (max-height: 703px) and (min-width: 768px) {
-        /* height: 95vh; */
         width: 100vh;
         img {
             display: block;
@@ -41,6 +37,9 @@ export const Profile = styled.div`
             width: auto;
             height: 60vh;
         }
+    }
+    @media (max-width: 767px) {
+        width: 77%;
     }
 `
 export const ProfileNav = styled.nav`
@@ -118,7 +117,8 @@ export const ProfileNav = styled.nav`
 `
 
 export const Message = styled.div`
-    /* width: 190vh; */
+    opacity: 1;
+    z-index: 2;
     h1 {
         font-size: clamp(1rem, 3vw, 3rem);
         font-family: 'Philosopher';
