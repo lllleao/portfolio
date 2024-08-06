@@ -53,7 +53,9 @@ const Home = () => {
                     <p>
                         Dica rápida: uma boa presença online e profissional faz
                         toda a diferença. É por isso que estou aqui! Olá, eu sou
-                        o Leão, desenvolvedor Front-End - rumo ao Full Stack.
+                        o Leão, desenvolvedor Front-End - em rumo ao Full Stack
+                        - experiênte com React, TypeScript, Python e Banco de
+                        Dados.
                     </p>
                 </S.Message>
             </S.Hero>

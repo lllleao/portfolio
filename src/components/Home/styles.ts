@@ -28,13 +28,13 @@ export const Hero = styled.div`
 `
 export const Profile = styled.div`
     padding: 16px;
-    width: 100%;
+    width: 120%;
     max-height: 680px;
-    height: 100%;
     img {
         width: 100%;
     }
     @media (max-width: 767px) {
+        width: 100%;
         img {
             display: block;
             margin: 0 auto;
