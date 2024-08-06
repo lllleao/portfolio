@@ -11,6 +11,7 @@ export const Aside = styled.aside<Props>`
     background-color: ${colors.purpleLight};
     padding: 8px;
     border-radius: 1rem;
+    z-index: 3;
 
     ul {
         position: relative;
