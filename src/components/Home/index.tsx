@@ -1,8 +1,22 @@
-import * as S from './styles'
-import avatar from '../../assets/perfil-fundo.png'
+import { useState } from 'react'
+
 import Slider from '../Slider'
 
+import * as S from './styles'
+import avatar from '../../assets/perfil-fundo.png'
+import cv from '../../assets/CV-atual.pdf'
+
 const Home = () => {
+    const [cvDownload, setCvDownload] = useState(false)
+
+    const handleAnimation = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
+        e.preventDefault()
+        setCvDownload(true)
+        setTimeout(() => {
+            setCvDownload(false)
+            window.location.href = cv
+        }, 4000)
+    }
     return (
         <S.HeroContainer>
             <S.Hero className="container">
@@ -16,10 +30,16 @@ const Home = () => {
                             <li className="github borderAnime">
                                 <span>LINKEDIN</span>
                             </li>
-                            <li className="curriculo">
-                                <i className="fa-solid fa-file-arrow-down"></i>
-                                Currículo
-                            </li>
+                            <S.BntDownload
+                                className="curriculo"
+                                $download={cvDownload}
+                                onClick={(e) => handleAnimation(e)}
+                            >
+                                <a href={cv} target="_blank" rel="noreferrer">
+                                    <i className="fa-solid fa-file-arrow-down"></i>
+                                    Currículo
+                                </a>
+                            </S.BntDownload>
                         </ul>
                     </S.ProfileNav>
                 </S.Profile>

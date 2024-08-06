@@ -26,6 +26,41 @@ const Global = createGlobalStyle`
         from { transform: translateX(0); }
         to { transform: translateX(-100%); }
     }
+
+    @keyframes loader {
+        0% {
+            width: 0;
+        } 100% {
+            width: 100%;
+        }
+    }
+
+    @keyframes loaderDeley {
+        to {
+            opacity: 0;
+        }
+    }
+
+    @keyframes buttonHeightClose {
+        30% {
+            color: transparent;
+        }
+        100% {
+            height: 0;
+            color: transparent;
+        }
+    }
+
+    @keyframes buttonHeightOpen {
+        30% {
+            height: 100%;
+        }
+        100% {
+            height: 100%;
+
+            color: #fff;
+        }
+    }
 `
 
 export default Global

@@ -1,5 +1,9 @@
 import { styled } from 'styled-components'
 
+type Props = {
+    $download: boolean
+}
+
 export const HeroContainer = styled.section`
     height: 100vh;
     display: flex;
@@ -25,17 +29,10 @@ export const Hero = styled.div`
 export const Profile = styled.div`
     padding: 16px;
     width: 100%;
+    max-height: 680px;
+    height: 100%;
     img {
         width: 100%;
-    }
-    @media (max-height: 703px) and (min-width: 768px) {
-        width: 100vh;
-        img {
-            display: block;
-            margin: 0 auto;
-            width: auto;
-            height: 60vh;
-        }
     }
     @media (max-width: 767px) {
         img {
@@ -71,9 +68,9 @@ export const ProfileNav = styled.nav`
         .borderAnime {
             width: 100%;
             position: relative;
-            padding: 0.5rem;
             cursor: pointer;
-            border: 2px solid #fff;
+            padding: 0.5rem;
+            border: 2px solid #fefefe;
 
             &::before {
                 position: absolute;
@@ -84,6 +81,7 @@ export const ProfileNav = styled.nav`
                 width: calc(100% - 12px);
                 height: calc(100% + 4px);
                 transform: scaleY(1);
+                transition: transform 0.3s linear;
             }
 
             &::after {
@@ -95,26 +93,22 @@ export const ProfileNav = styled.nav`
                 width: calc(100% + 4px);
                 height: calc(100% - 12px);
                 transform: scaleY(1);
+                transition: transform 0.3s linear;
+                transition-delay: 0.3s;
+            }
+
+            &:hover::after {
+                transform: scaleY(0);
+            }
+
+            &:hover::before {
+                transform: scaleX(0);
             }
 
             span {
                 position: relative;
                 display: block;
                 z-index: 2;
-            }
-        }
-
-        .curriculo {
-            display: block;
-            padding: 1vh;
-            background-color: #9047e5;
-            font-size: clamp(1rem, 3vh, 1.2rem);
-            cursor: pointer;
-            border-radius: 8px;
-
-            i {
-                font-size: clamp(16px, 3vh, 22px);
-                margin-right: 12px;
             }
         }
     }
@@ -127,6 +121,51 @@ export const ProfileNav = styled.nav`
     }
     .curriculo {
         grid-area: curriculo;
+    }
+`
+
+export const BntDownload = styled.li<Props>`
+    a {
+        text-decoration: none;
+        max-height: 48px;
+        height: 100%;
+        position: relative;
+        display: block;
+        padding: 1vh;
+        background-color: #9047e5;
+        font-size: clamp(1rem, 3vh, 1.2rem);
+        cursor: pointer;
+        border-radius: 8px;
+        animation: ${({ $download }) =>
+            $download
+                ? 'buttonHeightClose 0.5s linear,buttonHeightOpen 1s linear 3s;'
+                : 'none'};
+        animation-fill-mode: forwards;
+        overflow: hidden;
+
+        i {
+            font-size: clamp(16px, 3vh, 22px);
+            margin-right: 12px;
+            animation: ${({ $download }) =>
+                $download
+                    ? 'buttonHeightClose 0.5s linear, buttonHeightOpen 1s linear 3s;'
+                    : 'none'};
+
+            animation-fill-mode: forwards;
+        }
+
+        &::after {
+            content: '';
+            background-color: #2688ff;
+            position: absolute;
+            inset: 0;
+            width: 0;
+            animation: ${({ $download }) =>
+                $download
+                    ? 'loader 1s linear 1s, loaderDeley 0.5s linear 2.5s;'
+                    : 'none'};
+            animation-fill-mode: forwards;
+        }
     }
 `
 
