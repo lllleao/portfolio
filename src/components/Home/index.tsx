@@ -14,7 +14,12 @@ const Home = () => {
         setCvDownload(true)
         setTimeout(() => {
             setCvDownload(false)
-            window.location.href = cv
+            const link = document.createElement('a')
+            link.href = cv
+            link.download = 'cv.pdf'
+            link.click()
+            document.body.appendChild(link)
+            document.body.removeChild(link)
         }, 4000)
     }
     return (
