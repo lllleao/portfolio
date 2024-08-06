@@ -10,6 +10,9 @@ export const HeroContainer = styled.section`
     @media (max-height: 459px) and (min-width: 768px) {
         height: 100%;
     }
+    @media (max-height: 459px) and (min-width: 768px) {
+        height: 100%;
+    }
     @media (max-width: 767px) {
         height: 100svh;
     }
@@ -23,7 +26,7 @@ export const Hero = styled.div`
     @media (max-width: 767px) {
         flex-direction: column;
         justify-content: center;
-        gap: 32px;
+        gap: 28px;
     }
 `
 export const Profile = styled.div`
@@ -42,24 +45,41 @@ export const Profile = styled.div`
         }
     }
     @media (max-width: 767px) {
-        width: 77%;
+        /* margin: 0 auto; */
+        /* width: 77%; */
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 77%;
+        }
     }
 `
 export const ProfileNav = styled.nav`
+    /* width: 100%; */
     margin-top: 32px;
     ul {
+        width: 100%;
         display: grid;
         column-gap: 32px;
         grid-template-areas:
             'instagram github'
             'curriculo curriculo';
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
+        grid-template-rows: auto;
         row-gap: 2rem;
         font-weight: bold;
         text-align: center;
+        @media (max-width: 318px) {
+            grid-template-areas:
+                'instagram'
+                'github'
+                'curriculo';
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+        }
 
         .borderAnime {
+            width: 100%;
             position: relative;
             padding: 0.5rem;
             cursor: pointer;
@@ -95,6 +115,7 @@ export const ProfileNav = styled.nav`
         }
 
         .curriculo {
+            display: block;
             padding: 1vh;
             background-color: #9047e5;
             font-size: clamp(1rem, 3vh, 1.2rem);
