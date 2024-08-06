@@ -32,6 +32,7 @@ export const Profile = styled.div`
     max-height: 680px;
     img {
         width: 100%;
+        animation: shadowImg 1s alternate infinite;
     }
     @media (max-width: 767px) {
         width: 100%;

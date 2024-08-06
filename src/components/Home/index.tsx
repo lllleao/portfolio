@@ -51,10 +51,11 @@ const Home = () => {
                 <S.Message>
                     <h1>Lucas Leão</h1>
                     <p>
-                        Dica rápida: uma boa presença online e profissional faz
-                        toda a diferença. É por isso que estou aqui! Olá, eu sou
-                        o Leão, desenvolvedor Front-End - em rumo ao Full Stack
-                        - experiênte com React, TypeScript, Python e Banco de
+                        <span className="tip">Dica rápida:</span> uma boa
+                        presença online e profissional faz toda a diferença. É
+                        por isso que estou aqui! Olá, eu sou o Leão,
+                        desenvolvedor Front-End - em rumo ao Full Stack -
+                        experiênte com React, TypeScript, Python e Banco de
                         Dados.
                     </p>
                 </S.Message>

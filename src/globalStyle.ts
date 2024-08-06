@@ -61,6 +61,12 @@ const Global = createGlobalStyle`
             color: #fff;
         }
     }
+
+    @keyframes shadowImg {
+        to {
+            filter: drop-shadow(0 0 10px #9047e5);
+        }
+    }
 `
 
 export default Global
