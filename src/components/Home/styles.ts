@@ -36,6 +36,7 @@ export const Profile = styled.div`
     }
     @media (max-width: 767px) {
         width: 100%;
+        padding-top: 32px;
         img {
             display: block;
             margin: 0 auto;
@@ -173,7 +174,7 @@ export const BntDownload = styled.li<Props>`
 export const Message = styled.div`
     margin-bottom: 28px;
     h1 {
-        font-size: clamp(1rem, 3vw, 3rem);
+        font-size: clamp(1.5rem, 3vw, 3rem);
         font-family: 'Philosopher';
         letter-spacing: 0.5rem;
         text-transform: uppercase;

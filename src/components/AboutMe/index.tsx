@@ -1,8 +1,23 @@
+import { useDispatch } from 'react-redux'
 import * as S from './styles'
+import useIntersectionObserver from '../../utils/observerSection'
+import { useEffect } from 'react'
+import { about } from '../../store/reducers/intersection'
 
 const AboutMe = () => {
+    const dispatch = useDispatch()
+    const [observerRef, isIntersectingIn] = useIntersectionObserver({
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.8
+    })
+
+    useEffect(() => {
+        dispatch(about(isIntersectingIn))
+    }, [isIntersectingIn, dispatch])
+
     return (
-        <S.About id="about" className="container">
+        <S.About id="about" className="container" ref={observerRef}>
             <S.TitleAbout>Sobre mim</S.TitleAbout>
             <S.Story>
                 <p>
@@ -24,18 +39,6 @@ const AboutMe = () => {
                     dinâmicos, repletos de tarefas que não permitem acomodação,
                     pois isso me proporciona a oportunidade de desenvolver
                     constantemente minhas habilidades.
-                </p>
-                <br />
-                <p>
-                    Atualmente, estou focado em me tornar um desenvolvedor full
-                    stack. Para alcançar esse objetivo, estou cursando um curso
-                    profissionalizante de Desenvolvimento Full Stack Python. Já
-                    concluí diversos projetos, incluindo o site de uma editora
-                    cooperativa, listas de tarefas, landing pages, sites de
-                    compra, calculadora, agenda de contatos, entre outros. Cada
-                    um desses projetos trouxe seus próprios desafios e
-                    peculiaridades, ajudando-me a aprimorar meu pensamento
-                    lógico e minha capacidade de solucionar problemas.
                 </p>
             </S.Story>
         </S.About>

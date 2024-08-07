@@ -1,8 +1,16 @@
 import styled from 'styled-components'
 
 export const About = styled.section`
-    padding: 4rem 0;
-    /* height: 100vh; */
+    padding-top: 4rem;
+    height: 100vh;
+    @media (max-width: 767px) {
+        height: 100%;
+        padding-bottom: 4rem;
+    }
+    @media (max-height: 733px) {
+        height: 100%;
+        padding-bottom: 4rem;
+    }
 `
 
 export const TitleAbout = styled.h2`

@@ -1,22 +1,26 @@
-import { useState } from 'react'
 import { Aside } from './styles'
+import { useDispatch, useSelector } from 'react-redux'
+import { RootReducer } from '../../store'
+import { about, home, projects } from '../../store/reducers/intersection'
 
 const NavBar = () => {
-    const [navActive, setNavActive] = useState(-2)
+    const dispatch = useDispatch()
+    const { IsInside } = useSelector((state: RootReducer) => state.intersection)
+
     return (
-        <Aside $navPos={navActive}>
+        <Aside $navPos={IsInside}>
             <ul>
-                <li onClick={() => setNavActive(-2)}>
+                <li onClick={() => dispatch(home(true))}>
                     <a href="#home">
                         <i className="fa-solid fa-house"></i>
                     </a>
                 </li>
-                <li onClick={() => setNavActive(55)}>
+                <li onClick={() => dispatch(about(true))}>
                     <a href="#about">
                         <i className="fa-regular fa-user"></i>
                     </a>
                 </li>
-                <li onClick={() => setNavActive(112)}>
+                <li onClick={() => dispatch(projects(true))}>
                     <a href="#projects">
                         <i className="fa-solid fa-clipboard-check"></i>
                     </a>
