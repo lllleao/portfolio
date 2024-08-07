@@ -13,6 +13,9 @@ export const HeroContainer = styled.section`
     @media (max-width: 767px) {
         height: 100%;
     }
+    @media (min-width: 768px) and (max-height: 615px) {
+        height: 100%;
+    }
 `
 export const Hero = styled.div`
     display: flex;
@@ -172,6 +175,10 @@ export const BntDownload = styled.li<Props>`
 `
 
 export const Message = styled.div`
+    @media (max-width: 773px) and (max-height: 615px) {
+        margin-bottom: 0;
+        padding: 8px;
+    }
     margin-bottom: 28px;
     h1 {
         font-size: clamp(1.5rem, 3vw, 3rem);
