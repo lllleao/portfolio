@@ -7,7 +7,7 @@ type Props = {
 export const Aside = styled.aside<Props>`
     position: fixed;
     top: 5%;
-    right: 5%;
+    right: 4%;
     background-color: ${colors.purpleLight};
     padding: 8px;
     border-radius: 1rem;
@@ -19,14 +19,16 @@ export const Aside = styled.aside<Props>`
         flex-direction: column;
         align-items: center;
         li {
-            border-radius: 50%;
-
-            color: #fff;
-            padding: 8px;
-            font-size: 16px;
-            z-index: 1;
-            cursor: pointer;
-            &:nth-child(2) {
+            a {
+                display: block;
+                text-decoration: none;
+                color: #fff;
+                padding: 8px;
+                font-size: 16px;
+                cursor: pointer;
+                border-radius: 50%;
+            }
+            &:nth-child(2) a {
                 margin: 22px 0;
             }
         }
@@ -39,6 +41,7 @@ export const Aside = styled.aside<Props>`
             position: absolute;
             transition: top 0.1s linear;
             top: ${({ $navPos }) => ($navPos ? $navPos : '')}px;
+            z-index: -1;
         }
     }
     @media (min-width: 768px) and (max-width: 1279px) {
@@ -47,7 +50,7 @@ export const Aside = styled.aside<Props>`
         ul {
             flex-direction: row;
             li {
-                &:nth-child(2) {
+                &:nth-child(2) a {
                     margin: 0 18px;
                 }
             }
@@ -68,7 +71,9 @@ export const Aside = styled.aside<Props>`
 
         ul {
             li {
-                font-size: 12px;
+                a {
+                    font-size: 12px;
+                }
             }
 
             &::after {

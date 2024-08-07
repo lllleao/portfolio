@@ -3,7 +3,7 @@ import { useState } from 'react'
 import Slider from '../Slider'
 
 import * as S from './styles'
-import avatar from '../../assets/perfil-fundo.png'
+import avatar from '../../assets/perfil-fundo2.png'
 import cv from '../../assets/CV-atual.pdf'
 
 const Home = () => {
@@ -23,7 +23,7 @@ const Home = () => {
         }, 4000)
     }
     return (
-        <S.HeroContainer>
+        <S.HeroContainer id="home">
             <S.Hero className="container">
                 <S.Profile>
                     <img srcSet={avatar} alt="Leao Dev" />

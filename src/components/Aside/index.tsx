@@ -7,13 +7,19 @@ const NavBar = () => {
         <Aside $navPos={navActive}>
             <ul>
                 <li onClick={() => setNavActive(-2)}>
-                    <i className="fa-solid fa-house"></i>
+                    <a href="#home">
+                        <i className="fa-solid fa-house"></i>
+                    </a>
                 </li>
                 <li onClick={() => setNavActive(55)}>
-                    <i className="fa-regular fa-user"></i>
+                    <a href="#about">
+                        <i className="fa-regular fa-user"></i>
+                    </a>
                 </li>
                 <li onClick={() => setNavActive(112)}>
-                    <i className="fa-solid fa-clipboard-check"></i>
+                    <a href="#projects">
+                        <i className="fa-solid fa-clipboard-check"></i>
+                    </a>
                 </li>
             </ul>
         </Aside>

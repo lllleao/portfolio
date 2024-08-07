@@ -16,6 +16,10 @@ const Global = createGlobalStyle`
         font-family: 'Montserrat';
     }
 
+    html {
+        scroll-behavior: smooth;
+    }
+
     .container {
         max-width: 1312px;
         width: 90%;
