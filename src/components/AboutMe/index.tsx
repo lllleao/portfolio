@@ -6,11 +6,36 @@ import { about } from '../../store/reducers/intersection'
 
 const AboutMe = () => {
     const dispatch = useDispatch()
-    const [observerRef, isIntersectingIn] = useIntersectionObserver({
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.8
-    })
+    const [observerRef, isIntersectingIn, updateObserverOptions] =
+        useIntersectionObserver({
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.8
+        })
+    useEffect(() => {
+        const handleObserver = (entries: ResizeObserverEntry[]) => {
+            const newWidth = entries[0].borderBoxSize[0].inlineSize
+            console.log(newWidth)
+            if (newWidth <= 414) {
+                updateObserverOptions({
+                    root: null,
+                    rootMargin: '0px',
+                    threshold: 0.5
+                })
+            }
+        }
+        const resizerObs = new ResizeObserver(handleObserver)
+        const currentRef = observerRef.current
+        if (currentRef) {
+            resizerObs.observe(currentRef)
+        }
+        return () => {
+            if (currentRef) {
+                resizerObs.unobserve(currentRef)
+            }
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [observerRef])
 
     useEffect(() => {
         dispatch(about(isIntersectingIn))

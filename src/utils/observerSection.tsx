@@ -8,16 +8,17 @@ interface ObserverOptions {
 
 const useIntersectionObserver = (
     options: ObserverOptions
-): [RefObject<HTMLElement>, boolean] => {
+): [RefObject<HTMLElement>, boolean, (options: ObserverOptions) => void] => {
     const [isIntersectingIn, setIsIntersectig] = useState(false)
     const observerRef = useRef<HTMLElement>(null)
+    const [observerOptions, setObserverOptions] = useState(options)
 
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 setIsIntersectig(entry.isIntersecting)
             })
-        }, options)
+        }, observerOptions)
         const updatedRef = observerRef.current
 
         if (updatedRef) {
@@ -29,9 +30,13 @@ const useIntersectionObserver = (
                 observer.unobserve(updatedRef)
             }
         }
-    }, [options])
+    }, [observerOptions])
 
-    return [observerRef, isIntersectingIn] as const
+    const updateObserverOptions = (options: ObserverOptions) => {
+        setObserverOptions(options)
+    }
+
+    return [observerRef, isIntersectingIn, updateObserverOptions] as const
 }
 
 export default useIntersectionObserver

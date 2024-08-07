@@ -10,18 +10,21 @@ const NavBar = () => {
     return (
         <Aside $navPos={IsInside}>
             <ul>
-                <li onClick={() => dispatch(home(true))}>
-                    <a href="#home">
+                <li>
+                    <a href="#home" onClick={() => dispatch(home(true))}>
                         <i className="fa-solid fa-house"></i>
                     </a>
                 </li>
-                <li onClick={() => dispatch(about(true))}>
-                    <a href="#about">
+                <li>
+                    <a href="#about" onClick={() => dispatch(about(true))}>
                         <i className="fa-regular fa-user"></i>
                     </a>
                 </li>
-                <li onClick={() => dispatch(projects(true))}>
-                    <a href="#projects">
+                <li>
+                    <a
+                        href="#projects"
+                        onClick={() => dispatch(projects(true))}
+                    >
                         <i className="fa-solid fa-clipboard-check"></i>
                     </a>
                 </li>
