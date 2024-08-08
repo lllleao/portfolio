@@ -18,6 +18,8 @@ const Global = createGlobalStyle`
 
     html {
         scroll-behavior: smooth;
+    overflow: hidden;
+
     }
 
     .container {
