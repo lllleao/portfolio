@@ -6,7 +6,7 @@ type Props = {
 }
 
 export const NavHamburguer = styled.nav`
-    display: block;
+    display: none;
     @media (max-width: 767px) {
         display: block;
     }
