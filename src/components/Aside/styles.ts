@@ -92,11 +92,12 @@ export const MenuDeskTop = styled.div<Props>`
     }
 
     @media (max-width: 767px) {
+        top: 10%;
         padding: 6px 6px;
         right: auto;
         left: -18%;
         &.is-active {
-            left: 15%;
+            left: 5%;
         }
 
         ul {
@@ -181,9 +182,9 @@ export const MenuDeskTop = styled.div<Props>`
     }
     @media (max-width: 267px) {
         ul {
-            &::after {
-                
-            }
+            /* &::after {
+
+            } */
         }
     }
 `
