@@ -8,6 +8,7 @@ const NavBar = () => {
     const dispatch = useDispatch()
     const { IsInside } = useSelector((state: RootReducer) => state.intersection)
     const [isClicked, setIsClicked] = useState(false)
+    console.log(IsInside)
 
     return (
         <Aside>

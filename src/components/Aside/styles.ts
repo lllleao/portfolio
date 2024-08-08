@@ -98,8 +98,6 @@ export const MenuDeskTop = styled.div<Props>`
         &.is-active {
             left: 15%;
         }
-        /* @media (max-width: 480px) {
-        } */
 
         ul {
             li {
@@ -170,6 +168,27 @@ export const MenuDeskTop = styled.div<Props>`
             }
         }
     }
+    @media (max-width: 386px) {
+        transition: right 0.1s linear;
+
+        padding: 6px 6px;
+        left: auto;
+        right: -18%;
+        &.is-active {
+            left: auto;
+            right: 8%;
+        }
+    }
+    @media (max-width: 267px) {
+        ul {
+            &::after {
+                
+            }
+        }
+    }
 `
 
-export const Aside = styled.aside``
+export const Aside = styled.aside`
+    position: relative;
+    z-index: 2;
+`

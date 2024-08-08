@@ -15,8 +15,7 @@ const AboutMe = () => {
     useEffect(() => {
         const handleObserver = (entries: ResizeObserverEntry[]) => {
             const newWidth = entries[0].borderBoxSize[0].inlineSize
-            console.log(newWidth)
-            if (newWidth <= 414) {
+            if (newWidth <= 414 && newWidth > 250.1875) {
                 updateObserverOptions({
                     root: null,
                     rootMargin: '0px',
