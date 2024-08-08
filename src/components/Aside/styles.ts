@@ -6,8 +6,8 @@ type Props = {
 }
 
 export const NavHamburguer = styled.nav`
-    display: none;
-    @media (max-width: 768px) {
+    display: block;
+    @media (max-width: 767px) {
         display: block;
     }
     @media (max-height: 659px) and (max-width: 1101px) {
@@ -36,13 +36,17 @@ export const NavHamburguer = styled.nav`
     & .is-active-menu {
         li {
             &:nth-child(1) {
-                transform: rotate(-56deg) translate(-5px, 4px);
+                transform: rotate(44deg) translate(2px, 1px);
+                width: 18px;
             }
             &:nth-child(2) {
-                transform: rotate(-56deg) translate(1px, 0px);
+                transform: rotate(-44deg) translate(8px, -8px);
+                width: 18px;
+                margin: 0;
             }
             &:nth-child(3) {
-                transform: rotate(53deg) translate(-5px, -6px);
+                transform: rotate(0) translate(5px, -8px);
+                width: 26px;
             }
         }
     }
@@ -55,7 +59,7 @@ export const MenuDeskTop = styled.div<Props>`
     transition: left 0.3s ease-in 0.1s;
 
     background-color: ${colors.purpleLight};
-    padding: 8px;
+    padding: 6px;
     border-radius: 1rem;
 
     ul {
@@ -70,20 +74,20 @@ export const MenuDeskTop = styled.div<Props>`
                 text-decoration: none;
                 color: #fff;
                 padding: 8px;
-                font-size: 16px;
+                font-size: 0.8rem;
                 cursor: pointer;
                 border-radius: 50%;
             }
             &:nth-child(2) a {
-                margin: 22px 0;
+                margin: 16px 0;
             }
         }
         &::after {
             content: '';
             border-radius: 50%;
             background-color: ${colors.purple};
-            width: 40px;
-            height: 40px;
+            width: 30px;
+            height: 30px;
             position: absolute;
             transition: top 0.1s linear;
             top: ${({ $navPos }) => ($navPos ? $navPos : '')}px;
@@ -97,7 +101,7 @@ export const MenuDeskTop = styled.div<Props>`
         right: auto;
         left: -18%;
         &.is-active {
-            left: 5%;
+            left: 4%;
         }
 
         ul {
@@ -119,23 +123,21 @@ export const MenuDeskTop = styled.div<Props>`
         }
     }
     @media (min-width: 768px) and (max-width: 1279px) {
-        padding: 6px 18px;
-
         ul {
             flex-direction: row;
             li {
                 &:nth-child(2) a {
-                    margin: 0 18px;
+                    margin: 0 16px;
                 }
             }
 
             &::after {
                 transition: left 0.1s linear;
 
-                top: -2px;
-                ${({ $navPos }) => ($navPos === -2 ? 'left: -3px;' : '')}
-                ${({ $navPos }) => ($navPos === 55 ? 'left: 47px;' : '')}
-                ${({ $navPos }) => ($navPos === 112 ? 'left: 94px;' : '')}
+                top: 1px;
+                ${({ $navPos }) => ($navPos === 1 ? 'left: 1px;' : '')}
+                ${({ $navPos }) => ($navPos === 48 ? 'left: 45px;' : '')}
+                ${({ $navPos }) => ($navPos === 95 ? 'left: 88px;' : '')}
             }
         }
     }
@@ -169,24 +171,14 @@ export const MenuDeskTop = styled.div<Props>`
             }
         }
     }
-    @media (max-width: 386px) {
-        transition: right 0.1s linear;
 
-        padding: 6px 6px;
-        left: auto;
-        right: -18%;
-        &.is-active {
-            left: auto;
-            right: 8%;
-        }
-    }
-    @media (max-width: 267px) {
+    /* @media (max-width: 267px) {
         ul {
-            /* &::after {
+            &::after {
 
-            } */
+            }
         }
-    }
+    } */
 `
 
 export const Aside = styled.aside`

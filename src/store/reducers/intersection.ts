@@ -14,17 +14,17 @@ const intersectionSlice = createSlice({
     reducers: {
         home: (state, action: PayloadAction<boolean>) => {
             if (action.payload) {
-                state.IsInside = -2
+                state.IsInside = 1
             }
         },
         about: (state, action: PayloadAction<boolean>) => {
             if (action.payload) {
-                state.IsInside = 55
+                state.IsInside = 48
             }
         },
         projects: (state, action: PayloadAction<boolean>) => {
             if (action.payload) {
-                state.IsInside = 112
+                state.IsInside = 95
             }
         }
     }

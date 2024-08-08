@@ -31,7 +31,7 @@ export const Hero = styled.div`
 `
 export const Profile = styled.div`
     padding: 16px;
-    width: 120%;
+    width: 100%;
     max-height: 680px;
     img {
         width: 100%;
@@ -59,8 +59,9 @@ export const ProfileNav = styled.nav`
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
         row-gap: 2rem;
-        font-weight: bold;
+        /* font-weight: bold; */
         text-align: center;
+        font-size: 1rem;
         @media (max-width: 318px) {
             grid-template-areas:
                 'instagram'
@@ -149,7 +150,7 @@ export const BntDownload = styled.li<Props>`
         overflow: hidden;
 
         i {
-            font-size: clamp(16px, 3vh, 22px);
+            font-size: 1rem;
             margin-right: 12px;
             animation: ${({ $download }) =>
                 $download
