@@ -30,7 +30,19 @@ export const NavHamburguer = styled.nav`
         &:nth-child(2) {
             margin: 5px 0;
         }
-        transition: transform 0.3s ease;
+        &:nth-child(1) {
+            transform: rotate(0) translate(0);
+        }
+        &:nth-child(2) {
+            transform: rotate(0) translate(0);
+        }
+        &:nth-child(3) {
+            transform: rotate(0) translate(0);
+        }
+        transition:
+            transform 0.3s ease,
+            width 0.3s ease,
+            margin 0.3s ease;
     }
 
     & .is-active-menu {
