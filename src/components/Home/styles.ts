@@ -131,6 +131,10 @@ export const ProfileNav = styled.nav`
 `
 
 export const BntDownload = styled.li<Props>`
+    transition: transform 0.3s ease;
+    &:hover {
+        transform: translateY(4px);
+    }
     a {
         text-decoration: none;
         max-height: 48px;

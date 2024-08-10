@@ -1,0 +1,31 @@
+import styled from 'styled-components'
+
+export const ProjectContainer = styled.section`
+    padding: 4rem 0;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr; */
+    gap: 32px;
+
+    @media (max-width: 767px) {
+        display: block;
+        height: 100%;
+        width: 90%;
+    }
+`
+export const Tags = styled.ul`
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 1.5rem 0 0.5rem;
+    li {
+        margin-right: 0.5rem;
+        margin-bottom: 6px;
+        i {
+            font-size: 32px;
+        }
+    }
+`

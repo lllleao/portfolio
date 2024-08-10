@@ -72,6 +72,16 @@ const Global = createGlobalStyle`
             filter: drop-shadow(0 0 10px #9047e5);
         }
     }
+
+    @keyframes fly-1 {
+        from {
+        transform: translateY(0.1em);
+        }
+
+        to {
+            transform: translateY(-0.1em);
+        }
+    }
 `
 
 export default Global
