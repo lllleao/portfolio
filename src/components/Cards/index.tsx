@@ -22,7 +22,8 @@ const Card = ({ description, github, image, site, tags, alt }: Props) => {
 
     useEffect(() => {
         if (descRef.current) {
-            setDescHeight(descRef.current.clientHeight)
+            const hight = descRef.current.clientHeight
+            setDescHeight(hight)
         }
     }, [])
 
@@ -36,7 +37,7 @@ const Card = ({ description, github, image, site, tags, alt }: Props) => {
                     <img srcSet={image} alt={alt} />
 
                     <S.Links>
-                        <a href={site}>
+                        <a target="_blank" href={site} rel="noreferrer">
                             <div className="svg-wrapper arrow">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -53,7 +54,7 @@ const Card = ({ description, github, image, site, tags, alt }: Props) => {
                             </div>
                             <span>Ir para</span>
                         </a>
-                        <a href={github}>
+                        <a target="_blank" href={github} rel="noreferrer">
                             <div className="svg-wrapper github">
                                 <svg
                                     width="16"

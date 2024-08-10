@@ -7,7 +7,7 @@ export const CardBack = styled.div<Props>`
     position: absolute;
     top: 0;
     padding: 1.5rem 1rem;
-    /* margin: 0.5rem 0; */
+    overflow: auto;
     height: calc(${({ $hoverHeight }) => $hoverHeight}px);
     z-index: -1;
 

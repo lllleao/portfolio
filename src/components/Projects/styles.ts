@@ -6,8 +6,6 @@ export const ProjectContainer = styled.section`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    /* display: grid;
-    grid-template-columns: 1fr 1fr; */
     gap: 32px;
 
     @media (max-width: 767px) {
