@@ -8,8 +8,7 @@ export const CardBack = styled.div<Props>`
     top: 0;
     padding: 1.5rem 1rem;
     overflow: auto;
-    /* -webkit-overflow: auto; */
-    max-height: ${({ $hoverHeight }) => $hoverHeight}px;
+    max-height: 1000px;
     height: 100%;
     z-index: -1;
 
@@ -17,7 +16,6 @@ export const CardBack = styled.div<Props>`
     background-color: #0d0d0d;
     transform: rotateY(180deg) scale(0.98);
     transition: margin 0.3s;
-
     p {
         text-align: justify;
         line-height: 2rem;
