@@ -20,6 +20,22 @@ export const CardBack = styled.div<Props>`
         text-align: justify;
         line-height: 2rem;
     }
+
+    @media (min-width: 768px) {
+        &::-webkit-scrollbar {
+            border-radius: 1rem;
+        }
+        &::-webkit-scrollbar-track {
+            background: #692599;
+            border-radius: 1rem;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #000;
+            border: 3px solid #692599;
+            border-radius: 1rem;
+        }
+    }
 `
 export const CardFront = styled.div`
     /* position: absolute; */
