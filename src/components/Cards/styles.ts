@@ -10,6 +10,7 @@ export const CardBack = styled.div<Props>`
     padding: 1.5rem 1rem;
     overflow: auto;
     -webkit-overflow-scrolling: auto;
+    -webkit-overflow-scrolling-x: auto;
     max-height: 1000px;
     height: 100%;
     z-index: -1;
@@ -24,8 +25,6 @@ export const CardBack = styled.div<Props>`
     }
 
     @media (min-width: 768px) {
-        -webkit-overflow-scrolling: auto;
-
         &::-webkit-scrollbar {
             border-radius: 1rem;
         }
