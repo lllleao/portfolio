@@ -24,6 +24,8 @@ export const CardBack = styled.div<Props>`
     }
 
     @media (min-width: 768px) {
+        -webkit-overflow-scrolling: auto;
+
         &::-webkit-scrollbar {
             border-radius: 1rem;
         }
