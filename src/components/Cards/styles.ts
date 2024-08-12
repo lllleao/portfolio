@@ -3,11 +3,13 @@ type Props = {
     $hoverHeight: number
     $isFlipped: boolean
 }
+
 export const CardBack = styled.div<Props>`
     position: absolute;
     top: 0;
     padding: 1.5rem 1rem;
     overflow: auto;
+    -webkit-overflow-scrolling: auto;
     max-height: 1000px;
     height: 100%;
     z-index: -1;
@@ -37,8 +39,8 @@ export const CardBack = styled.div<Props>`
         }
     }
 `
+
 export const CardFront = styled.div`
-    /* position: absolute; */
     padding: 1.5rem 1rem;
     background-color: #0d0d0d;
     width: 100%;
