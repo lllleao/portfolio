@@ -1,6 +1,6 @@
 import { Aside, MenuDeskTop, NavHamburguer } from './styles'
 import { useSelector } from 'react-redux'
-import { RootReducer } from '@store'
+import { RootReducer } from '@store/index'
 import { useState } from 'react'
 
 const NavBar = () => {
