@@ -90,7 +90,7 @@ const Projects = () => {
                 }
             />
             <Card
-                description="A plicação se trata de uma agenda de contatos, nela, podemos adicionar, deletar e filtrar contatos. Com um layout responsivo, essa aplicação foi um objeto de estudos, um desafio, que eu consegui concluir com orgulho."
+                description="A aplicação se trata de uma agenda de contatos, nela, podemos adicionar, deletar e filtrar contatos. Com um layout responsivo, essa aplicação foi um objeto de estudos, um desafio, que eu consegui concluir com orgulho."
                 alt="Agenda de Contatos"
                 site="https://contatos-weld.vercel.app/"
                 github="https://github.com/lllleao/contatos"
