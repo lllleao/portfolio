@@ -1,11 +1,11 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 type PropsContato = {
-    IsInside: number
+    isInsideNumber: number
 }
 
 const initialState: PropsContato = {
-    IsInside: 0
+    isInsideNumber: 0
 }
 
 const intersectionSlice = createSlice({
@@ -14,17 +14,17 @@ const intersectionSlice = createSlice({
     reducers: {
         home: (state, action: PayloadAction<boolean>) => {
             if (action.payload) {
-                state.IsInside = 1
+                state.isInsideNumber = 1
             }
         },
         about: (state, action: PayloadAction<boolean>) => {
             if (action.payload) {
-                state.IsInside = 48
+                state.isInsideNumber = 48
             }
         },
         projects: (state, action: PayloadAction<boolean>) => {
             if (action.payload) {
-                state.IsInside = 95
+                state.isInsideNumber = 95
             }
         }
     }

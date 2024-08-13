@@ -5,7 +5,6 @@ interface ObserverOptions {
     rootMargin?: string
     threshold?: number | number[]
 }
-
 const useIntersectionObserver = (
     options: ObserverOptions
 ): [RefObject<HTMLElement>, boolean, (options: ObserverOptions) => void] => {

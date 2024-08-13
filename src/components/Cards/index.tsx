@@ -27,9 +27,6 @@ const Card = ({ description, github, image, site, tags, alt }: Props) => {
         }
     }, [])
 
-    if (descRef.current) {
-        console.log(descRef.current.clientHeight)
-    }
     return (
         <S.ContainerFlip>
             <S.Card $isFlipped={isClicked}>

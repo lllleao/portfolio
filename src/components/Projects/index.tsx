@@ -1,3 +1,6 @@
+import { useEffect } from 'react'
+import { useDispatch } from 'react-redux'
+import { projects } from '../../store/reducers/intersection'
 import Tag from '../Tag'
 import Card from '../Cards'
 import * as S from './styles'
@@ -7,10 +10,50 @@ import agenda from '../../assets/projects/agenda-contatos.png'
 import restLanding from '../../assets/projects/rest-landing.png'
 import restEcommerce from '../../assets/projects/rest-commerce.png'
 import todoList from '../../assets/projects/todo-list.png'
+import useIntersectionObserver from '../../utils/observerSection'
 
 const Projects = () => {
+    const dispatch = useDispatch()
+    const [observerRef, isIntersectingIn, updateObserverOptions] =
+        useIntersectionObserver({
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.5
+        })
+    useEffect(() => {
+        const handleObserver = (entries: ResizeObserverEntry[]) => {
+            const newWidth = entries[0].borderBoxSize[0].inlineSize
+
+            if (newWidth <= 690.296875) {
+                updateObserverOptions({
+                    root: null,
+                    rootMargin: '0px',
+                    threshold: 0.3
+                })
+            }
+        }
+        const resizerObs = new ResizeObserver(handleObserver)
+        const currentRef = observerRef.current
+        if (currentRef) {
+            resizerObs.observe(currentRef)
+        }
+        return () => {
+            if (currentRef) {
+                resizerObs.unobserve(currentRef)
+            }
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [observerRef])
+
+    useEffect(() => {
+        dispatch(projects(isIntersectingIn))
+    }, [isIntersectingIn, dispatch])
     return (
-        <S.ProjectContainer id="projects" className="container">
+        <S.ProjectContainer
+            ref={observerRef}
+            id="projects"
+            className="container"
+        >
             <Card
                 description="Cidadecliplse é uma editora cooperativa com inúmeras obras
                     publicadas, em formatos físicos e digitais. Eles me deram a
@@ -23,12 +66,10 @@ const Projects = () => {
                 image={cidadeClipse}
                 tags={
                     <S.Tags>
-                        <Tag backcolor="#d34446">Gulp</Tag>
-                        <Tag color="#000" backcolor="#EFD81D">
-                            JS
-                        </Tag>
-                        <Tag backcolor="#CE6B9C">SASS</Tag>
-                        <Tag backcolor="#93C745">Express</Tag>
+                        <Tag>Gulp</Tag>
+                        <Tag>JS</Tag>
+                        <Tag>SASS</Tag>
+                        <Tag>Express</Tag>
                     </S.Tags>
                 }
             />
@@ -40,9 +81,9 @@ const Projects = () => {
                 image={ludos}
                 tags={
                     <S.Tags>
-                        <Tag backcolor="#43a4be">React</Tag>
-                        <Tag backcolor="#101C5F">TypeScript</Tag>
-                        <Tag backcolor="#FF957F">Styled-Components</Tag>
+                        <Tag>React</Tag>
+                        <Tag>TypeScript</Tag>
+                        <Tag>Styled-Components</Tag>
                     </S.Tags>
                 }
             />
@@ -54,10 +95,10 @@ const Projects = () => {
                 image={agenda}
                 tags={
                     <S.Tags>
-                        <Tag backcolor="#43a4be">React</Tag>
-                        <Tag backcolor="#101C5F">TypeScript</Tag>
-                        <Tag backcolor="#FF957F">Styled-Components</Tag>
-                        <Tag backcolor="#7A50BF">React Redux</Tag>
+                        <Tag>React</Tag>
+                        <Tag>TypeScript</Tag>
+                        <Tag>Styled-Components</Tag>
+                        <Tag>React Redux</Tag>
                     </S.Tags>
                 }
             />
@@ -70,9 +111,9 @@ const Projects = () => {
                 image={restLanding}
                 tags={
                     <S.Tags>
-                        <Tag backcolor="#e2641b">HTML</Tag>
-                        <Tag backcolor="#384eca">CSS</Tag>
-                        <Tag backcolor="#533B78">BootStrap</Tag>
+                        <Tag>HTML</Tag>
+                        <Tag>CSS</Tag>
+                        <Tag>BootStrap</Tag>
                     </S.Tags>
                 }
             />
@@ -85,11 +126,11 @@ const Projects = () => {
                 image={restEcommerce}
                 tags={
                     <S.Tags>
-                        <Tag backcolor="#43a4be">React</Tag>
-                        <Tag backcolor="#101C5F">TypeScript</Tag>
-                        <Tag backcolor="#FF957F">Styled-Components</Tag>
-                        <Tag backcolor="#7A50BF">React Redux</Tag>
-                        <Tag backcolor="#F54855">React Router</Tag>
+                        <Tag>React</Tag>
+                        <Tag>TypeScript</Tag>
+                        <Tag>Styled-Components</Tag>
+                        <Tag>React Redux</Tag>
+                        <Tag>React Router</Tag>
                     </S.Tags>
                 }
             />
@@ -102,9 +143,9 @@ const Projects = () => {
                 image={todoList}
                 tags={
                     <S.Tags>
-                        <Tag backcolor="#e2641b">HTML</Tag>
-                        <Tag backcolor="#384eca">CSS</Tag>
-                        <Tag backcolor="#0F6FB0">JQuery</Tag>
+                        <Tag>HTML</Tag>
+                        <Tag>CSS</Tag>
+                        <Tag>JQuery</Tag>
                     </S.Tags>
                 }
             />

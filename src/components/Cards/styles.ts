@@ -9,8 +9,6 @@ export const CardBack = styled.div<Props>`
     top: 0;
     padding: 1.5rem 1rem;
     overflow: auto;
-    -webkit-overflow-scrolling: auto;
-    -webkit-overflow-scrolling-x: auto;
     max-height: 1000px;
     height: 100%;
     z-index: -1;
@@ -136,7 +134,6 @@ export const ContainerFlip = styled.div`
 
 export const Card = styled.div<{ $isFlipped: boolean }>`
     position: relative;
-    /* overflow: hidden; */
     height: max-content;
     background-image: linear-gradient(163deg, #6a218a 0%, #6139f2 100%);
     border-radius: 1.5rem;
@@ -161,8 +158,13 @@ export const FlipButton = styled.button`
     padding: 0.4rem 1rem;
     border-radius: 0.3rem;
     background-color: #279b49;
-    position: absolute;
     transform-style: preserve-3d;
     z-index: 2;
     margin-top: 2rem;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s;
+    &:hover {
+        transform: scale(1.05);
+    }
 `

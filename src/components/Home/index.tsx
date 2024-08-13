@@ -43,11 +43,15 @@ const Home = () => {
                     <img srcSet={avatar} alt="Leao Dev" />
                     <S.ProfileNav>
                         <ul>
-                            <li className="instagram borderAnime">
-                                <span>INSTAGRAM</span>
+                            <li className="instagram button-borders">
+                                <button className="primary-button">
+                                    INSTAGRAM
+                                </button>
                             </li>
-                            <li className="github borderAnime">
-                                <span>LINKEDIN</span>
+                            <li className="github button-borders">
+                                <button className="primary-button">
+                                    LINKEDIN
+                                </button>
                             </li>
                             <S.BntDownload
                                 className="curriculo"

@@ -1,40 +1,33 @@
 import { Aside, MenuDeskTop, NavHamburguer } from './styles'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { RootReducer } from '../../store'
-import { about, home, projects } from '../../store/reducers/intersection'
 import { useState } from 'react'
 
 const NavBar = () => {
-    const dispatch = useDispatch()
-    const { IsInside } = useSelector((state: RootReducer) => state.intersection)
+    const { isInsideNumber } = useSelector(
+        (state: RootReducer) => state.intersection
+    )
     const [isClicked, setIsClicked] = useState(false)
-    // const [ballBar, setBallBar] = useState(0)
-    console.log(IsInside)
-    // const handleNavBar = (func) => {
-    //     dispatch(func(true))
-    // }
+
     return (
         <Aside>
             <MenuDeskTop
                 className={isClicked ? 'is-active' : ''}
-                $navPos={IsInside}
+                $navPos={isInsideNumber}
             >
                 <ul>
                     <li>
-                        <a href="#home" onClick={() => dispatch(home(true))}>
+                        <a href="#home">
                             <i className="fa-solid fa-house"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="#about" onClick={() => dispatch(about(true))}>
+                        <a href="#about">
                             <i className="fa-regular fa-user"></i>
                         </a>
                     </li>
                     <li>
-                        <a
-                            href="#projects"
-                            onClick={() => dispatch(projects(true))}
-                        >
+                        <a href="#projects">
                             <i className="fa-solid fa-clipboard-check"></i>
                         </a>
                     </li>

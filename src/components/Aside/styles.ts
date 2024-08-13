@@ -10,9 +10,11 @@ export const NavHamburguer = styled.nav`
     @media (max-width: 767px) {
         display: block;
     }
+
     @media (max-height: 659px) and (max-width: 1101px) {
         display: block;
     }
+
     ul {
         padding: 8px;
         cursor: pointer;
@@ -156,10 +158,15 @@ export const MenuDeskTop = styled.div<Props>`
 
     @media (max-height: 659px) and (max-width: 1101px) {
         right: auto;
-        left: -10%;
+        left: -21%;
+        top: 10%;
         padding: 6px 6px;
+        transition:
+            top 0.3s,
+            left 0.3s;
         &.is-active {
-            left: 10%;
+            top: 15%;
+            left: 4%;
         }
 
         ul {
@@ -183,14 +190,6 @@ export const MenuDeskTop = styled.div<Props>`
             }
         }
     }
-
-    /* @media (max-width: 267px) {
-        ul {
-            &::after {
-
-            }
-        }
-    } */
 `
 
 export const Aside = styled.aside`

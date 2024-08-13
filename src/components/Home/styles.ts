@@ -70,52 +70,91 @@ export const ProfileNav = styled.nav`
             grid-template-columns: 1fr;
             grid-template-rows: 1fr;
         }
-
-        .borderAnime {
-            width: 100%;
-            position: relative;
+        .primary-button {
+            color: white;
             cursor: pointer;
-            padding: 0.5rem;
-            border: 2px solid #fefefe;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 0.05rem;
+            border: 1px solid #0e1822;
+            padding: 0.8rem 2.1rem;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 531.28 200'%3E%3Cdefs%3E%3Cstyle%3E .shape %7B fill: %23FF4655 /* fill: %230E1822; */ %7D %3C/style%3E%3C/defs%3E%3Cg id='Layer_2' data-name='Layer 2'%3E%3Cg id='Layer_1-2' data-name='Layer 1'%3E%3Cpolygon class='shape' points='415.81 200 0 200 115.47 0 531.28 0 415.81 200' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+            background-color: #0e1822;
+            background-size: 200%;
+            background-position: 200%;
+            background-repeat: no-repeat;
+            transition: 0.3s ease-in-out;
+            transition-property: background-position, border, color;
+            position: relative;
+            z-index: 1;
+            width: 100%;
+        }
 
-            &::before {
-                position: absolute;
-                content: '';
-                top: -2px;
-                left: 6px;
-                background-color: #2b0b39;
-                width: calc(100% - 12px);
-                height: calc(100% + 4px);
-                transform: scaleY(1);
-                transition: transform 0.3s linear;
-            }
+        .primary-button:hover {
+            border: 1px solid #ff4655;
+            color: white;
+            background-position: 40%;
+        }
 
-            &::after {
-                position: absolute;
-                content: '';
-                top: 6px;
-                left: -2px;
-                background-color: #2b0b39;
-                width: calc(100% + 4px);
-                height: calc(100% - 12px);
-                transform: scaleY(1);
-                transition: transform 0.3s linear;
-                transition-delay: 0.3s;
-            }
+        .primary-button:before {
+            content: '';
+            position: absolute;
+            background-color: #0e1822;
+            width: 0.2rem;
+            height: 0.2rem;
+            top: -1px;
+            left: -1px;
+            transition: background-color 0.15s ease-in-out;
+        }
 
-            &:hover::after {
-                transform: scaleY(0);
-            }
+        .primary-button:hover:before {
+            background-color: white;
+        }
 
-            &:hover::before {
-                transform: scaleX(0);
-            }
+        .primary-button:hover:after {
+            background-color: white;
+        }
 
-            span {
-                position: relative;
-                display: block;
-                z-index: 2;
-            }
+        .primary-button:after {
+            content: '';
+            position: absolute;
+            background-color: #ff4655;
+            width: 0.3rem;
+            height: 0.3rem;
+            bottom: -1px;
+            right: -1px;
+            transition: background-color 0.15s ease-in-out;
+        }
+
+        .button-borders {
+            position: relative;
+        }
+
+        .button-borders:before {
+            content: '';
+            position: absolute;
+            width: calc(100% + 0.5em);
+            height: 50%;
+            left: -0.3em;
+            top: -0.3em;
+            border: 1px solid #fff;
+            border-bottom: 0px;
+        }
+
+        .button-borders:after {
+            content: '';
+            position: absolute;
+            width: calc(100% + 0.5em);
+            height: 50%;
+            left: -0.3em;
+            bottom: -0.3em;
+            border: 1px solid #fff;
+            border-top: 0px;
+            z-index: 0;
+        }
+
+        .shape {
+            fill: #0e1822;
         }
     }
 
