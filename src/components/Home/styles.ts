@@ -78,7 +78,7 @@ export const ProfileNav = styled.nav`
             letter-spacing: 0.05rem;
             border: 1px solid #0e1822;
             padding: 0.8rem 2.1rem;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 531.28 200'%3E%3Cdefs%3E%3Cstyle%3E .shape %7B fill: %23FF4655 /* fill: %230E1822; */ %7D %3C/style%3E%3C/defs%3E%3Cg id='Layer_2' data-name='Layer 2'%3E%3Cg id='Layer_1-2' data-name='Layer 1'%3E%3Cpolygon class='shape' points='415.81 200 0 200 115.47 0 531.28 0 415.81 200' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 531.28 200'%3E%3Cdefs%3E%3Cstyle%3E%20.shape%20%7B%20fill:%20%239047E5;%20%7D%20%3C/style%3E%3C/defs%3E%3Cg%20id='Layer_2'%20data-name='Layer%202'%3E%3Cg%20id='Layer_1-2'%20data-name='Layer%201'%3E%3Cpolygon%20class='shape'%20points='415.81%20200%200%20200%20115.47%200%20531.28%200%20415.81%20200'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
             background-color: #0e1822;
             background-size: 200%;
             background-position: 200%;
@@ -91,7 +91,7 @@ export const ProfileNav = styled.nav`
         }
 
         .primary-button:hover {
-            border: 1px solid #ff4655;
+            border: 1px solid #0e1822;
             color: white;
             background-position: 40%;
         }
@@ -104,14 +104,21 @@ export const ProfileNav = styled.nav`
             height: 0.2rem;
             top: -1px;
             left: -1px;
-            transition: background-color 0.15s ease-in-out;
+            transition:
+                background-color 0.15s ease-in-out,
+                width 0.15s ease-in-out,
+                height 0.15s ease-in-out;
         }
 
         .primary-button:hover:before {
+            width: 0.5rem;
+            height: 0.5rem;
             background-color: #2b0b39;
         }
 
         .primary-button:hover:after {
+            width: 0.5rem;
+            height: 0.5rem;
             background-color: #2b0b39;
         }
 
@@ -123,7 +130,10 @@ export const ProfileNav = styled.nav`
             height: 0.3rem;
             bottom: -1px;
             right: -1px;
-            transition: background-color 0.15s ease-in-out;
+            transition:
+                background-color 0.15s ease-in-out,
+                width 0.15s ease-in-out,
+                height 0.15s ease-in-out;
         }
 
         .button-borders {

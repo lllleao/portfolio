@@ -57,7 +57,7 @@ const Projects = () => {
             <Card
                 description="Cidadecliplse é uma editora cooperativa com inúmeras obras
                     publicadas, em formatos físicos e digitais. Eles me deram a
-                    honra e a missão de produzir seu site principal. Nele é
+                    a missão de produzir seu site principal. Nele é
                     possível ver as publicações gratuitas e dar uma espiada nos
                     novos lançamentos "
                 alt="Cidadeclipse"
@@ -74,7 +74,7 @@ const Projects = () => {
                 }
             />
             <Card
-                description="A LUDOS é uma produtora de vídeo e animação que trabalha com serviços para empresas e criadores de conteúdo, e também desenvolve projetos audiovisuais independentes que auxiliam artistas a expandirem seus portfólios."
+                description="A LUDOS é uma produtora de vídeo e animação que trabalha com serviços para empresas e criadores de conteúdo, além de desenvolver projetos audiovisuais independentes que auxiliam artistas a expandirem seus portfólios."
                 alt="Ludos Productions"
                 site="https://ludos-ecru.vercel.app/"
                 github="https://github.com/lllleao/ludos"
