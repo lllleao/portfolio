@@ -1,8 +1,10 @@
+import { FooterContainer } from './styles'
+
 const Footer = () => {
     return (
-        <footer>
+        <FooterContainer>
             <p>Todos os direitos reservados - &copy; Lucas Leão</p>
-        </footer>
+        </FooterContainer>
     )
 }
 

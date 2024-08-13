@@ -44,14 +44,24 @@ const Home = () => {
                     <S.ProfileNav>
                         <ul>
                             <li className="instagram button-borders">
-                                <button className="primary-button">
+                                <a
+                                    href="https://www.instagram.com/leao_dev/"
+                                    target="_blank"
+                                    className="primary-button"
+                                    rel="noreferrer"
+                                >
                                     INSTAGRAM
-                                </button>
+                                </a>
                             </li>
                             <li className="github button-borders">
-                                <button className="primary-button">
+                                <a
+                                    href="https://www.linkedin.com/in/lucas-leao-lima/"
+                                    target="_blank"
+                                    className="primary-button"
+                                    rel="noreferrer"
+                                >
                                     LINKEDIN
-                                </button>
+                                </a>
                             </li>
                             <S.BntDownload
                                 className="curriculo"

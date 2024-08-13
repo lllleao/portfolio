@@ -71,6 +71,8 @@ export const ProfileNav = styled.nav`
             grid-template-rows: 1fr;
         }
         .primary-button {
+            display: block;
+            text-decoration: none;
             color: white;
             cursor: pointer;
             font-size: 13px;
@@ -83,7 +85,7 @@ export const ProfileNav = styled.nav`
             background-size: 200%;
             background-position: 200%;
             background-repeat: no-repeat;
-            transition: 0.3s ease-in-out;
+            transition: 0.5s ease-in-out;
             transition-property: background-position, border, color;
             position: relative;
             z-index: 1;
