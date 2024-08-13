@@ -108,17 +108,17 @@ export const ProfileNav = styled.nav`
         }
 
         .primary-button:hover:before {
-            background-color: white;
+            background-color: #2b0b39;
         }
 
         .primary-button:hover:after {
-            background-color: white;
+            background-color: #2b0b39;
         }
 
         .primary-button:after {
             content: '';
             position: absolute;
-            background-color: #ff4655;
+            background-color: #9047e5;
             width: 0.3rem;
             height: 0.3rem;
             bottom: -1px;
