@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { home } from '@store/reducers/intersection'
 
-import Slider from '../Slider'
+import useIntersectionObserver from '@interSection/observerSection'
+import Slider from '@components/Slider'
 
 import * as S from './styles'
-import avatar from '../../assets/perfil-fundo2.png'
-import cv from '../../assets/CV-atual.pdf'
-import { useDispatch } from 'react-redux'
-import { home } from '../../store/reducers/intersection'
-import useIntersectionObserver from '../../utils/observerSection'
+
+import avatar from '@images/perfil-fundo2.png'
+import cv from '@images/CV-atual.pdf'
 
 const Home = () => {
     const [cvDownload, setCvDownload] = useState(false)

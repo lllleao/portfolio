@@ -1,16 +1,18 @@
 import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
-import { projects } from '../../store/reducers/intersection'
-import Tag from '../Tag'
-import Card from '../Cards'
+
+import { projects } from '@store/reducers/intersection'
+import useIntersectionObserver from '@interSection/observerSection'
+import Tag from '@components/Tag'
+import Card from '@components/Cards'
 import * as S from './styles'
-import cidadeClipse from '../../assets/projects/fotoP.png'
-import ludos from '../../assets/projects/ludosPrint.png'
-import agenda from '../../assets/projects/agenda-contatos.png'
-import restLanding from '../../assets/projects/rest-landing.png'
-import restEcommerce from '../../assets/projects/rest-commerce.png'
-import todoList from '../../assets/projects/todo-list.png'
-import useIntersectionObserver from '../../utils/observerSection'
+
+import cidadeClipse from '@images/projects/fotoP.png'
+import ludos from '@images/projects/ludosPrint.png'
+import agenda from '@images/projects/agenda-contatos.png'
+import restLanding from '@images/projects/rest-landing.png'
+import restEcommerce from '@images/projects/rest-commerce.png'
+import todoList from '@images/projects/todo-list.png'
 
 const Projects = () => {
     const dispatch = useDispatch()

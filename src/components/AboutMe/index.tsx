@@ -1,8 +1,8 @@
 import { useDispatch } from 'react-redux'
 import * as S from './styles'
-import useIntersectionObserver from '../../utils/observerSection'
+import useIntersectionObserver from '@interSection/observerSection'
 import { useEffect } from 'react'
-import { about } from '../../store/reducers/intersection'
+import { about } from '@store/reducers/intersection'
 
 const AboutMe = () => {
     const dispatch = useDispatch()
