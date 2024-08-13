@@ -1,15 +1,14 @@
 import AboutMe from '../../components/AboutMe'
 import Home from '../../components/Home'
 import Projects from '../../components/Projects'
-import { MainContainer } from './styles'
 
 const Main = () => {
     return (
-        <MainContainer>
+        <main>
             <Home />
             <AboutMe />
             <Projects />
-        </MainContainer>
+        </main>
     )
 }
 

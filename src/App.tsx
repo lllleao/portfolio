@@ -3,6 +3,7 @@ import NavBar from './components/Aside'
 import Main from './containers/Main'
 import Global from './globalStyle'
 import store from './store'
+import Footer from './components/Footer'
 
 function App() {
     return (
@@ -10,6 +11,7 @@ function App() {
             <Global />
             <Main />
             <NavBar />
+            <Footer />
         </Provider>
     )
 }
