@@ -8,7 +8,7 @@ import Card from '@components/Cards'
 import * as S from './styles'
 
 import cidadeClipse from '@images/projects/fotoP.png'
-import ludos from '@images/projects/ludosPrint.png'
+import eplay from '@images/projects/eplay.png'
 import agenda from '@images/projects/agenda-contatos.png'
 import restLanding from '@images/projects/rest-landing.png'
 import restEcommerce from '@images/projects/rest-commerce.png'
@@ -76,16 +76,18 @@ const Projects = () => {
                 }
             />
             <Card
-                description="A LUDOS é uma produtora de vídeo e animação que trabalha com serviços para empresas e criadores de conteúdo, além de desenvolver projetos audiovisuais independentes que auxiliam artistas a expandirem seus portfólios."
-                alt="Ludos Productions"
-                site="https://ludos-ecru.vercel.app/"
-                github="https://github.com/lllleao/ludos"
-                image={ludos}
+                description="Um projeto de estudos, trata-se de uma página que simula um e-commerce. Existe as abas e categorias que listam os jogos, ao clicar o usuáriuo é direcionado a página do jogo, a qual exibe fotos e vídeos do jogo. Além disso, existe a parte do checkout."
+                alt="EPLAY"
+                site="https://eplay-three-virid.vercel.app/"
+                github="https://github.com/lllleao/eplay"
+                image={eplay}
                 tags={
                     <S.Tags>
                         <Tag>React</Tag>
                         <Tag>TypeScript</Tag>
                         <Tag>Styled-Components</Tag>
+                        <Tag>React Redux</Tag>
+                        <Tag>React Router</Tag>
                     </S.Tags>
                 }
             />
