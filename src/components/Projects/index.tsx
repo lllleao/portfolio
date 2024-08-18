@@ -63,7 +63,7 @@ const Projects = () => {
                     possível ver as publicações gratuitas e dar uma espiada nos
                     novos lançamentos "
                 alt="Cidadeclipse"
-                site="https://cidadeclipse.vercel.app/"
+                site="https://cidadeclipse.com/"
                 github="https://github.com/lllleao/cidadeclipse"
                 image={cidadeClipse}
                 tags={
