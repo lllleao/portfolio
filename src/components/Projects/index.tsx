@@ -125,8 +125,8 @@ const Projects = () => {
             <Card
                 description="Aplicação de um ecommerce fictício. Ela lista restaurantes, ao escolher um, o usuário é direcionado ao cardápio do mesmo. É possível ver o preço e informações de cada prato e simular um pedido."
                 alt="Restaurante fictício Ecommerce"
-                site="#"
-                github="#"
+                site="https://efood-umber-kappa.vercel.app/"
+                github="https://github.com/lllleao/efood"
                 image={restEcommerce}
                 tags={
                     <S.Tags>
@@ -142,8 +142,8 @@ const Projects = () => {
             <Card
                 description="Aplicação se trata de uma lista de tarefas com armazenamento local, ou seja, as tarefas registradas são guardadas na memória do navegador. Nela, Podemos configurar a urgência da tarefa, adicionar novas e deletar antigas. Além disso, podemos customizar com nosso próprio nome."
                 alt="Lista de tarefas"
-                site="#"
-                github="#"
+                site="https://lista-tarefas-ebac.vercel.app/"
+                github="https://github.com/lllleao/lista-tarefas-ebac"
                 image={todoList}
                 tags={
                     <S.Tags>
