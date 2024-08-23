@@ -2,7 +2,17 @@ import styled from 'styled-components'
 import { colors } from '../../globalStyle'
 
 type Props = {
-    $navPos: number
+    $navPos: string
+}
+
+const menuPositions = (current: string[], navPos: string) => {
+    const positionMap = {
+        '1': current[0],
+        '48': current[1],
+        '95': current[2]
+    }
+
+    return positionMap[navPos as keyof typeof positionMap] || ''
 }
 
 export const NavHamburguer = styled.nav`
@@ -11,7 +21,7 @@ export const NavHamburguer = styled.nav`
         display: block;
     }
 
-    @media (max-height: 659px) and (max-width: 1101px) {
+    @media (max-height: 794px) and (max-width: 786px) {
         display: block;
     }
 
@@ -97,6 +107,7 @@ export const MenuDeskTop = styled.div<Props>`
             }
         }
         &::after {
+            --position: ${({ $navPos }) => $navPos}px;
             content: '';
             border-radius: 50%;
             background-color: ${colors.purple};
@@ -104,7 +115,7 @@ export const MenuDeskTop = styled.div<Props>`
             height: 30px;
             position: absolute;
             transition: top 0.1s linear;
-            top: ${({ $navPos }) => ($navPos ? $navPos : '')}px;
+            top: var(--position);
             z-index: -1;
         }
     }
@@ -129,14 +140,10 @@ export const MenuDeskTop = styled.div<Props>`
                 left: 0;
                 width: 30px;
                 height: 30px;
-
-                ${({ $navPos }) => ($navPos === -2 ? 'top: 1px;' : '')}
-                ${({ $navPos }) => ($navPos === 55 ? 'top: 54px;' : '')}
-                ${({ $navPos }) => ($navPos === 112 ? 'top: 107px;' : '')}
             }
         }
     }
-    @media (min-width: 768px) and (max-width: 1279px) {
+    @media (min-width: 787px) and (max-width: 1279px) {
         ul {
             flex-direction: row;
             li {
@@ -146,17 +153,16 @@ export const MenuDeskTop = styled.div<Props>`
             }
 
             &::after {
+                --position: ${({ $navPos }) =>
+                    menuPositions(['0', '45px', '87px'], $navPos)};
                 transition: left 0.1s linear;
-
                 top: 1px;
-                ${({ $navPos }) => ($navPos === 1 ? 'left: 1px;' : '')}
-                ${({ $navPos }) => ($navPos === 48 ? 'left: 45px;' : '')}
-                ${({ $navPos }) => ($navPos === 95 ? 'left: 88px;' : '')}
+                left: var(--position);
             }
         }
     }
 
-    @media (max-height: 659px) and (max-width: 1101px) {
+    @media (max-height: 794px) and (max-width: 786px) {
         right: auto;
         left: -21%;
         top: 10%;
@@ -165,7 +171,7 @@ export const MenuDeskTop = styled.div<Props>`
             top 0.3s,
             left 0.3s;
         &.is-active {
-            top: 15%;
+            top: 11%;
             left: 4%;
         }
 
@@ -180,13 +186,12 @@ export const MenuDeskTop = styled.div<Props>`
                 }
             }
             &::after {
+                --position: ${({ $navPos }) =>
+                    menuPositions(['1px', '54px', '107px'], $navPos)};
                 left: 0;
+                top: var(--position);
                 width: 30px;
                 height: 30px;
-
-                ${({ $navPos }) => ($navPos === -2 ? 'top: 1px;' : '')}
-                ${({ $navPos }) => ($navPos === 55 ? 'top: 54px;' : '')}
-                ${({ $navPos }) => ($navPos === 112 ? 'top: 107px;' : '')}
             }
         }
     }

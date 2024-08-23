@@ -2,7 +2,6 @@ import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 
 import { projects } from '@store/reducers/intersection'
-import useIntersectionObserver from '@interSection/observerSection'
 import Tag from '@components/Tag'
 import Card from '@components/Cards'
 import * as S from './styles'
@@ -13,49 +12,17 @@ import agenda from '@images/projects/agenda-contatos.png'
 import restLanding from '@images/projects/rest-landing.png'
 import restEcommerce from '@images/projects/rest-commerce.png'
 import todoList from '@images/projects/todo-list.png'
+import { useInView } from 'react-intersection-observer'
 
 const Projects = () => {
     const dispatch = useDispatch()
-    const [observerRef, isIntersectingIn, updateObserverOptions] =
-        useIntersectionObserver({
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.5
-        })
-    useEffect(() => {
-        const handleObserver = (entries: ResizeObserverEntry[]) => {
-            const newWidth = entries[0].borderBoxSize[0].inlineSize
-
-            if (newWidth <= 690.296875) {
-                updateObserverOptions({
-                    root: null,
-                    rootMargin: '0px',
-                    threshold: 0.3
-                })
-            }
-        }
-        const resizerObs = new ResizeObserver(handleObserver)
-        const currentRef = observerRef.current
-        if (currentRef) {
-            resizerObs.observe(currentRef)
-        }
-        return () => {
-            if (currentRef) {
-                resizerObs.unobserve(currentRef)
-            }
-        }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [observerRef])
+    const { ref: myRef, inView } = useInView({ threshold: 0.2 })
 
     useEffect(() => {
-        dispatch(projects(isIntersectingIn))
-    }, [isIntersectingIn, dispatch])
+        dispatch(projects(inView))
+    }, [inView, dispatch])
     return (
-        <S.ProjectContainer
-            ref={observerRef}
-            id="projects"
-            className="container"
-        >
+        <S.ProjectContainer ref={myRef} id="projects" className="container">
             <Card
                 description="Cidadecliplse é uma editora cooperativa com inúmeras obras
                     publicadas, em formatos físicos e digitais. Eles me deram a

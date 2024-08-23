@@ -14,9 +14,8 @@ const useIntersectionObserver = (
 
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                setIsIntersectig(entry.isIntersecting)
-            })
+            const entry = entries[0]
+            setIsIntersectig(entry.isIntersecting)
         }, observerOptions)
         const updatedRef = observerRef.current
 

@@ -1,47 +1,19 @@
 import { useDispatch } from 'react-redux'
 import * as S from './styles'
-import useIntersectionObserver from '@interSection/observerSection'
 import { useEffect } from 'react'
 import { about } from '@store/reducers/intersection'
+import { useInView } from 'react-intersection-observer'
 
 const AboutMe = () => {
     const dispatch = useDispatch()
-    const [observerRef, isIntersectingIn, updateObserverOptions] =
-        useIntersectionObserver({
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.8
-        })
-    useEffect(() => {
-        const handleObserver = (entries: ResizeObserverEntry[]) => {
-            const newWidth = entries[0].borderBoxSize[0].inlineSize
-            if (newWidth <= 414 && newWidth > 250.1875) {
-                updateObserverOptions({
-                    root: null,
-                    rootMargin: '0px',
-                    threshold: 0.5
-                })
-            }
-        }
-        const resizerObs = new ResizeObserver(handleObserver)
-        const currentRef = observerRef.current
-        if (currentRef) {
-            resizerObs.observe(currentRef)
-        }
-        return () => {
-            if (currentRef) {
-                resizerObs.unobserve(currentRef)
-            }
-        }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [observerRef])
+    const { ref: myRef, inView } = useInView({ threshold: 0.2 })
 
     useEffect(() => {
-        dispatch(about(isIntersectingIn))
-    }, [isIntersectingIn, dispatch])
+        dispatch(about(inView))
+    }, [inView, dispatch])
 
     return (
-        <S.About id="about" className="container" ref={observerRef}>
+        <S.About id="about" className="container" ref={myRef}>
             <S.TitleAbout>Sobre mim</S.TitleAbout>
             <S.Story>
                 <p>

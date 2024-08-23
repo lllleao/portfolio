@@ -62,7 +62,7 @@ export const ProfileNav = styled.nav`
         /* font-weight: bold; */
         text-align: center;
         font-size: 1rem;
-        @media (max-width: 318px) {
+        @media (max-width: 399px) {
             grid-template-areas:
                 'instagram'
                 'github'

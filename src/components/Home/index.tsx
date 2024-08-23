@@ -2,27 +2,22 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { home } from '@store/reducers/intersection'
 
-import useIntersectionObserver from '@interSection/observerSection'
 import Slider from '@components/Slider'
 
 import * as S from './styles'
 
 import avatar from '@images/perfil-fundo2.png'
 import cv from '@images/CV-atual.pdf'
+import { useInView } from 'react-intersection-observer'
 
 const Home = () => {
     const [cvDownload, setCvDownload] = useState(false)
+    const { ref: myRef, inView } = useInView({ threshold: 0.2 })
 
     const dispatch = useDispatch()
-    const [observerRef, isIntersectingIn] = useIntersectionObserver({
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.5
-    })
-
     useEffect(() => {
-        dispatch(home(isIntersectingIn))
-    }, [isIntersectingIn, dispatch])
+        dispatch(home(inView))
+    }, [inView, dispatch])
 
     const handleAnimation = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
         e.preventDefault()
@@ -38,7 +33,7 @@ const Home = () => {
         }, 4000)
     }
     return (
-        <S.HeroContainer id="home" ref={observerRef}>
+        <S.HeroContainer id="home" ref={myRef}>
             <S.Hero className="container">
                 <S.Profile>
                     <img srcSet={avatar} alt="Leao Dev" />
