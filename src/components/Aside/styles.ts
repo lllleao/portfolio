@@ -132,7 +132,7 @@ export const MenuDeskTop = styled.div<Props>`
         ul {
             li {
                 a {
-                    font-size: 12px;
+                    /* font-size: 12px; */
                 }
             }
 
