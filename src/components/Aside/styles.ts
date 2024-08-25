@@ -140,6 +140,7 @@ export const MenuDeskTop = styled.div<Props>`
                 left: 0;
                 width: 30px;
                 height: 30px;
+                top: var(--position);
             }
         }
     }
