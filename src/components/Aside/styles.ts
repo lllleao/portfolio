@@ -98,7 +98,7 @@ export const MenuDeskTop = styled.div<Props>`
                 text-decoration: none;
                 color: #fff;
                 padding: 8px;
-                font-size: 0.8rem;
+                font-size: 12px;
                 cursor: pointer;
                 border-radius: 50%;
             }
@@ -130,12 +130,6 @@ export const MenuDeskTop = styled.div<Props>`
         }
 
         ul {
-            li {
-                a {
-                    /* font-size: 12px; */
-                }
-            }
-
             &::after {
                 left: 0;
                 width: 30px;
@@ -155,7 +149,7 @@ export const MenuDeskTop = styled.div<Props>`
 
             &::after {
                 --position: ${({ $navPos }) =>
-                    menuPositions(['0', '45px', '87px'], $navPos)};
+                    menuPositions(['0', '44px', '86px'], $navPos)};
                 transition: left 0.1s linear;
                 top: 1px;
                 left: var(--position);
@@ -179,9 +173,6 @@ export const MenuDeskTop = styled.div<Props>`
         ul {
             flex-direction: column;
             li {
-                a {
-                    font-size: 12px;
-                }
                 &:nth-child(2) a {
                     margin: 22px 0;
                 }
