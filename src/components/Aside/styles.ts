@@ -122,7 +122,7 @@ export const MenuDeskTop = styled.div<Props>`
 
     @media (max-width: 767px) {
         top: 10%;
-        padding: 6px 6px;
+        padding: 6px;
         right: auto;
         left: -18%;
         &.is-active {
@@ -131,10 +131,9 @@ export const MenuDeskTop = styled.div<Props>`
 
         ul {
             &::after {
+                --position: ${({ $navPos }) =>
+                    menuPositions(['0', '3rem', '5.8rem'], $navPos)};
                 left: 0;
-                width: 30px;
-                height: 30px;
-                top: var(--position);
             }
         }
     }
@@ -161,7 +160,7 @@ export const MenuDeskTop = styled.div<Props>`
         right: auto;
         left: -21%;
         top: 10%;
-        padding: 6px 6px;
+        padding: 6px;
         transition:
             top 0.3s,
             left 0.3s;
@@ -172,18 +171,10 @@ export const MenuDeskTop = styled.div<Props>`
 
         ul {
             flex-direction: column;
-            li {
-                &:nth-child(2) a {
-                    margin: 22px 0;
-                }
-            }
+
             &::after {
                 --position: ${({ $navPos }) =>
-                    menuPositions(['1px', '54px', '107px'], $navPos)};
-                left: 0;
-                top: var(--position);
-                width: 30px;
-                height: 30px;
+                    menuPositions(['0', '3rem', '5.8rem'], $navPos)};
             }
         }
     }
