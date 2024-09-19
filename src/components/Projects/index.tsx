@@ -31,7 +31,7 @@ const Projects = () => {
                     novos lançamentos "
                 alt="Cidadeclipse"
                 site="https://cidadeclipse.com/"
-                github="https://github.com/lllleao/cidadeclipse"
+                github="https://github.com/lllleao/cd-react"
                 image={cidadeClipse}
                 tags={
                     <S.Tags>
