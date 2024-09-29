@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { home } from '@store/reducers/intersection'
 
@@ -13,6 +13,28 @@ import { useInView } from 'react-intersection-observer'
 const Home = () => {
     const [cvDownload, setCvDownload] = useState(false)
     const { ref: myRef, inView } = useInView({ threshold: 0.2 })
+    const hasMounted = useRef(false)
+    const [letters, setLetters] = useState('')
+    const text =
+        ' uma boa presença online e profissional faz toda a diferença. É por isso que estou aqui! Olá, eu sou o Leão, desenvolvedor Front-End - em rumo ao Full Stack - experiênte com React, TypeScript, Python e SQL.'
+
+    useEffect(() => {
+        setTimeout(() => {
+            if (!hasMounted.current) {
+                hasMounted.current = true
+                let index = 0
+
+                const intervelId = setInterval(() => {
+                    if (index + 1 < text.length) {
+                        setLetters((prev) => prev + text[index])
+                        index++
+                    } else {
+                        clearInterval(intervelId)
+                    }
+                }, 20)
+            }
+        }, 2000)
+    }, [])
 
     const dispatch = useDispatch()
     useEffect(() => {
@@ -74,13 +96,10 @@ const Home = () => {
                 </S.Profile>
                 <S.Message>
                     <h1>Lucas Leão</h1>
-                    <p>
-                        <span className="tip">Dica rápida:</span> uma boa
-                        presença online e profissional faz toda a diferença. É
-                        por isso que estou aqui! Olá, eu sou o Leão,
-                        desenvolvedor Front-End - em rumo ao Full Stack -
-                        experiênte com React, TypeScript, Python e SQL.
-                    </p>
+                    <S.Tip>
+                        <span className="tip">Dica rápida:</span>{' '}
+                        <span className="tip-text">{letters}</span>
+                    </S.Tip>
                 </S.Message>
             </S.Hero>
             <Slider />

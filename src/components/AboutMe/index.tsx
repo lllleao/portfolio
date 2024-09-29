@@ -3,6 +3,7 @@ import * as S from './styles'
 import { useEffect } from 'react'
 import { about } from '@store/reducers/intersection'
 import { useInView } from 'react-intersection-observer'
+import TitleSection from '@components/TitleSection'
 
 const AboutMe = () => {
     const dispatch = useDispatch()
@@ -14,9 +15,11 @@ const AboutMe = () => {
 
     return (
         <S.About id="about" className="container" ref={myRef}>
-            <S.TitleAbout>Sobre mim</S.TitleAbout>
+            <TitleSection isAnimation inView={inView}>
+                Sobre mim
+            </TitleSection>
             <S.Story>
-                <p>
+                <p className={`${inView ? 'is-active' : ''} from-left`}>
                     Iniciei minha trajetória profissional gerenciando uma
                     pequena lan house, o que despertou minha paixão pela
                     tecnologia. A partir daí, ingressei na Filosofia, uma área
@@ -29,7 +32,7 @@ const AboutMe = () => {
                     desistir.
                 </p>
                 <br />
-                <p>
+                <p className={`${inView ? 'is-active' : ''} from-right`}>
                     Adoro enfrentar problemas complexos, seja trabalhando em
                     equipe ou individualmente. Também me destaco em ambientes
                     dinâmicos, repletos de tarefas que não permitem acomodação,

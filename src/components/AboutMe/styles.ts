@@ -13,13 +13,6 @@ export const About = styled.section`
     }
 `
 
-export const TitleAbout = styled.h2`
-    text-align: center;
-    color: #fff;
-    font-size: clamp(2rem, 4vw, 3rem);
-    margin-bottom: 3rem;
-`
-
 export const Story = styled.div`
     margin: 0 auto;
     color: #fff;
@@ -27,4 +20,18 @@ export const Story = styled.div`
     text-align: justify;
     line-height: 3rem;
     width: 90%;
+
+    .from-left {
+        opacity: 0;
+        &.is-active {
+            animation: comingLeft 2s 0.5s ease forwards;
+        }
+    }
+
+    .from-right {
+        opacity: 0;
+        &.is-active {
+            animation: comingRight 2s 0.5s ease forwards;
+        }
+    }
 `

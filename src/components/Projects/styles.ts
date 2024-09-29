@@ -1,17 +1,20 @@
 import styled from 'styled-components'
 
 export const ProjectContainer = styled.section`
-    padding: 4rem 0;
-    min-height: 100vh;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 32px;
+    .projects-container {
+        padding: 4rem 0;
+        min-height: 100vh;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 32px;
+        margin: 0 auto;
 
-    @media (max-width: 767px) {
-        display: block;
-        height: 100%;
-        width: 90%;
+        @media (max-width: 767px) {
+            display: block;
+            height: 100%;
+            width: 90%;
+        }
     }
 `
 export const Tags = styled.ul`

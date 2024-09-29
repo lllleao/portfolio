@@ -31,6 +31,7 @@ export const Hero = styled.div`
 `
 export const Profile = styled.div`
     padding: 16px;
+    max-width: 407px;
     width: 100%;
     max-height: 680px;
     img {
@@ -231,11 +232,14 @@ export const BntDownload = styled.li<Props>`
 `
 
 export const Message = styled.div`
+    max-width: 784px;
+    width: 100%;
+
+    margin-bottom: 28px;
     @media (max-width: 773px) and (max-height: 615px) {
         margin-bottom: 0;
         padding: 8px;
     }
-    margin-bottom: 28px;
     h1 {
         font-size: clamp(1.5rem, 3vw, 3rem);
         font-family: 'Philosopher';
@@ -244,13 +248,13 @@ export const Message = styled.div`
         text-align: center;
         margin-bottom: 1rem;
         text-shadow: 8px 8px 12px #000;
+        animation: coming 1s ease;
     }
-
-    p {
-        font-size: 1.3rem;
-        font-size: clamp(1rem, 2vw, 1.3rem);
-        line-height: 3rem;
-        text-align: justify;
-        text-shadow: 8px 8px 12px #000;
-    }
+`
+export const Tip = styled.p`
+    font-size: 1.3rem;
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    line-height: 3rem;
+    text-align: justify;
+    text-shadow: 8px 8px 12px #000;
 `
