@@ -13,6 +13,7 @@ import cineLanding from '@images/projects/cine-landing.png'
 import restEcommerce from '@images/projects/rest-commerce.png'
 import todoList from '@images/projects/todo-list.png'
 import amelie from '@images/projects/amelie.jpg'
+import lazyFox from '@images/projects/lazyFox.png'
 import { useInView } from 'react-intersection-observer'
 import TitleSection from '@components/TitleSection'
 
@@ -27,6 +28,21 @@ const Projects = () => {
         <S.ProjectContainer ref={myRef} id="projects" className="container">
             <TitleSection inView={inView}>Projetos Recentes</TitleSection>
             <div className="projects-container">
+                <Card
+                    description="A Lazy Fox Design é uma empresa de social media. Ela produz mídias em diversos formatos para alavancar a publicidade de marcas. O site foi feito com React. É uma pequena loja virtual. A página exibe os produtos e encaminha para o whats'app da empresa para concluir o pagamento."
+                    alt="Lazy Fox"
+                    site="https://lazy-fox.vercel.app/"
+                    github="https://github.com/lllleao/lazy-fox"
+                    image={lazyFox}
+                    tags={
+                        <S.Tags>
+                            <Tag>React</Tag>
+                            <Tag>TypeScript</Tag>
+                            <Tag>Styled-Components</Tag>
+                            <Tag>React Redux</Tag>
+                        </S.Tags>
+                    }
+                />
                 <Card
                     description="Cidadecliplse é uma editora cooperativa com inúmeras obras
                     publicadas por eles mesmos, em formatos físicos e digitais. Eles me deram a missão de produzir seu site principal. Nele é
