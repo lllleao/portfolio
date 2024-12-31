@@ -49,7 +49,7 @@ const Projects = () => {
                     possível ver as publicações gratuitas e dar uma espiada nos
                     novos lançamentos "
                     alt="Cidadeclipse"
-                    site="https://cidadeclipse.com/"
+                    site="https://www.cidadeclipse.com/"
                     github="https://github.com/lllleao/cd-react"
                     image={cidadeClipse}
                     tags={
