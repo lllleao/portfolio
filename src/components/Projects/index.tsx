@@ -58,7 +58,7 @@ const Projects = () => {
                             <Tag>TypeScript</Tag>
                             <Tag>Styled-Components</Tag>
                             <Tag>Express</Tag>
-                            <Tag>NoSQL</Tag>
+                            <Tag>MySql</Tag>
                         </S.Tags>
                     }
                 />
