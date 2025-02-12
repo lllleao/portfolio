@@ -59,6 +59,7 @@ const Projects = () => {
                             <Tag>Styled-Components</Tag>
                             <Tag>Express</Tag>
                             <Tag>MySql</Tag>
+                            <Tag>Api</Tag>
                         </S.Tags>
                     }
                 />
@@ -75,6 +76,7 @@ const Projects = () => {
                             <Tag>Styled-Components</Tag>
                             <Tag>React Redux</Tag>
                             <Tag>React Router</Tag>
+                            <Tag>Api</Tag>
                         </S.Tags>
                     }
                 />
@@ -122,6 +124,7 @@ const Projects = () => {
                             <Tag>Styled-Components</Tag>
                             <Tag>React Redux</Tag>
                             <Tag>React Router</Tag>
+                            <Tag>Api</Tag>
                         </S.Tags>
                     }
                 />
