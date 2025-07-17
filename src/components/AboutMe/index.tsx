@@ -20,16 +20,18 @@ const AboutMe = () => {
             </TitleSection>
             <S.Story>
                 <p className={`${inView ? 'is-active' : ''} from-left`}>
-                    Iniciei minha trajetória profissional gerenciando uma
-                    pequena lan house, o que despertou minha paixão pela
-                    tecnologia. A partir daí, ingressei na Filosofia, uma área
-                    que, à primeira vista, pode parecer contraditória à
-                    tecnologia, mas que, na verdade, compartilha muitos
-                    elementos em comum, especialmente no que diz respeito à
-                    lógica e ao esforço intelectual. Desde o ensino médio, venho
-                    explorando ambas as áreas, o que me fez desenvolver o gosto
-                    por desafios e uma determinação inabalável para nunca
-                    desistir.
+                    Meu nome é Lucas Leão. Sou formado em Filosofia pela
+                    Universidade Federal do Ceará (UFC) e concluí uma formação
+                    técnica pela EBAC (Escola Britânica de Artes Criativas e
+                    Tecnologia) em Desenvolvedor Full Stack Python. Ao longo da
+                    minha trajetória, desenvolvi projetos acadêmicos e
+                    comerciais que exigiram criatividade e habilidades
+                    técnicas. Entre eles estão o site de uma editora
+                    cooperativa, uma agenda de contatos, landing pages e o
+                    frontend de um e-commerce. Esses projetos me permitiram
+                    aprimorar minhas capacidades de resolução de problemas e de
+                    aplicação prática de tecnologias relacionadas ao
+                    desenvolvimento Full Stack.
                 </p>
                 <br />
                 <p className={`${inView ? 'is-active' : ''} from-right`}>

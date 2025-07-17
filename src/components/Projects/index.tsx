@@ -13,7 +13,7 @@ import cineLanding from '@images/projects/cine-landing.png'
 import restEcommerce from '@images/projects/rest-commerce.png'
 import todoList from '@images/projects/todo-list.png'
 import amelie from '@images/projects/amelie.jpg'
-import lazyFox from '@images/projects/lazyFox.png'
+import fakeRede from '@images/projects/fake_rede.png'
 import { useInView } from 'react-intersection-observer'
 import TitleSection from '@components/TitleSection'
 
@@ -29,37 +29,21 @@ const Projects = () => {
             <TitleSection inView={inView}>Projetos Recentes</TitleSection>
             <div className="projects-container">
                 <Card
-                    description="A Lazy Fox Design é uma empresa de social media. Ela produz mídias em diversos formatos para alavancar a publicidade de marcas. O site foi feito com React. É uma pequena loja virtual. A página exibe os produtos e encaminha para o whats'app da empresa para concluir o pagamento."
-                    alt="Lazy Fox"
-                    site="https://lazy-fox.vercel.app/"
-                    github="https://github.com/lllleao/lazy-fox"
-                    image={lazyFox}
-                    tags={
-                        <S.Tags>
-                            <Tag>React</Tag>
-                            <Tag>TypeScript</Tag>
-                            <Tag>Styled-Components</Tag>
-                            <Tag>React Redux</Tag>
-                        </S.Tags>
-                    }
-                />
-                <Card
                     description="Cidadecliplse é uma editora cooperativa com inúmeras obras
                     publicadas por eles mesmos, em formatos físicos e digitais. Eles me deram a missão de produzir seu site principal. Nele é
                     possível ver as publicações gratuitas e dar uma espiada nos
                     novos lançamentos "
                     alt="Cidadeclipse"
                     site="https://www.cidadeclipse.com/"
-                    github="https://github.com/lllleao/cd-react"
+                    github="https://github.com/lllleao/frontend-cd"
                     image={cidadeClipse}
                     tags={
                         <S.Tags>
                             <Tag>React</Tag>
                             <Tag>TypeScript</Tag>
                             <Tag>Styled-Components</Tag>
-                            <Tag>Express</Tag>
+                            <Tag>NestJs</Tag>
                             <Tag>MySql</Tag>
-                            <Tag>Api</Tag>
                         </S.Tags>
                     }
                 />
@@ -77,6 +61,22 @@ const Projects = () => {
                             <Tag>React Redux</Tag>
                             <Tag>React Router</Tag>
                             <Tag>Api</Tag>
+                        </S.Tags>
+                    }
+                />
+                <Card
+                    description="Este é o frontend e o backend de um clone simplificado do Twitter, desenvolvido com React 19, Vite, TypeScript e DRF. Ele consome uma API REST desenvolvida com Django e oferece uma interface amigável para os usuários interagirem com o sistema."
+                    alt="Rede Social Fake"
+                    site="https://frontend-ebac-one.vercel.app/"
+                    github="https://github.com/lllleao/frontend_ebac"
+                    image={fakeRede}
+                    tags={
+                        <S.Tags>
+                            <Tag>React</Tag>
+                            <Tag>TypeScript</Tag>
+                            <Tag>Styled-Components</Tag>
+                            <Tag>DRF</Tag>
+                            <Tag>SQLlite</Tag>
                         </S.Tags>
                     }
                 />
