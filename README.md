@@ -1,30 +1,64 @@
-# React + TypeScript + Vite
+# 🧑‍💻 Portfólio Pessoal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é o repositório do meu portfólio pessoal, desenvolvido com foco em apresentar meus projetos, habilidades e informações profissionais de forma interativa, moderna e responsiva.
 
-Currently, two official plugins are available:
+## 🚀 Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Este projeto foi construído com as seguintes tecnologias e bibliotecas:
 
-## Expanding the ESLint configuration
+- **React 18** – Biblioteca para construção de interfaces modernas
+- **TypeScript** – Superset do JavaScript que adiciona tipagem estática
+- **Vite** – Build tool moderna e extremamente rápida para desenvolvimento frontend
+- **Redux Toolkit** – Gerenciamento de estado de forma eficiente
+- **React Redux** – Conectando Redux ao React de forma simples
+- **React Intersection Observer** – Para animações baseadas na visibilidade dos elementos na tela
+- **Styled Components** – Estilização com CSS-in-JS
+- **ESLint + Prettier** – Ferramentas para padronização e qualidade do código
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## ✨ Funcionalidades
 
-- Configure the top-level `parserOptions` property like this:
+- ✅ Apresentação de informações pessoais e profissionais
+- ✅ Listagem de projetos com links e descrições
+- ✅ Animações e transições suaves com Intersection Observer
+- ✅ Layout responsivo para diferentes tamanhos de tela
+- ✅ Organização de código com boas práticas (TypeScript, ESLint, Prettier)
+- ✅ Gerenciamento de estado global (Redux Toolkit)
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+## 📁 Estrutura do Projeto
+
+```plaintext
+📂 portifolio
+├── public/
+├── src/
+│   ├── components/        # Componentes reutilizáveis
+│   ├── pages/             # Páginas principais do site
+│   ├── store/             # Configuração do Redux Toolkit
+│   ├── styles/            # Estilização global e temas
+│   └── main.tsx           # Arquivo principal da aplicação
+├── index.html
+├── vite.config.ts
+└── README.md
 ```
+## 🌐 Hospedagem
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+> Acesse meu portfólio: [Leão Dev](https://leaodev.vercel.app/)
+
+## 🧠 Aprendizados
+
+Durante o desenvolvimento deste portfólio, trabalhei com:
+
+- Boas práticas de componentização e organização com React
+- Gerenciamento de estado com Redux Toolkit
+- Tipagem forte com TypeScript
+- Animações baseadas em rolagem e visibilidade com Intersection Observer
+- Padronização do código com ESLint e Prettier
+- Deploy de aplicações frontend com Vite
+
+## 📌 Observações
+
+Este portfólio está em constante evolução. Pretendo adicionar novas seções, melhorias visuais e mais projetos conforme avanços na minha carreira.
+
+---
+
+Feito com 💙 por Lucas Leão
+[LinkedIn](https://www.linkedin.com/in/lucas-leao-lima/) • [GitHub](https://github.com/lllleao)
