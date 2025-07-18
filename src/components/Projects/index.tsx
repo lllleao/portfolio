@@ -67,8 +67,8 @@ const Projects = () => {
                 <Card
                     description="Este é o frontend e o backend de um clone simplificado do Twitter, desenvolvido com React 19, Vite, TypeScript e DRF. Ele consome uma API REST desenvolvida com Django e oferece uma interface amigável para os usuários interagirem com o sistema."
                     alt="Rede Social Fake"
-                    site="https://frontend-ebac-one.vercel.app/"
-                    github="https://github.com/lllleao/frontend_ebac"
+                    site="https://fake-social-network.vercel.app/"
+                    github="https://github.com/lllleao/social-network-frontend"
                     image={fakeRede}
                     tags={
                         <S.Tags>
