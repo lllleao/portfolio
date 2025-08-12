@@ -22,7 +22,7 @@ const Home = () => {
         setTimeout(() => {
             if (!hasMounted.current) {
                 hasMounted.current = true
-                let index = 0
+                let index = -1
 
                 const intervelId = setInterval(() => {
                     if (index + 1 < text.length) {
