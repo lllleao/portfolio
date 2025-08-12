@@ -16,13 +16,13 @@ const Home = () => {
     const hasMounted = useRef(false)
     const [letters, setLetters] = useState('')
     const text =
-        ' Uma boa presença online e profissional faz toda a diferença. É por isso que estou aqui! Olá, eu sou o Leão, desenvolvedor Full Stack - experiênte com React, TypeScript, Python, MySQL, MongoDb e PostGresql.'
+        '  Uma boa presença online e profissional faz toda a diferença. É por isso que estou aqui! Olá, eu sou o Leão, desenvolvedor Full Stack - experiênte com React, TypeScript, Python, MySQL, MongoDb e PostGresql.'
 
     useEffect(() => {
         setTimeout(() => {
             if (!hasMounted.current) {
                 hasMounted.current = true
-                let index = -1
+                let index = 0
 
                 const intervelId = setInterval(() => {
                     if (index + 1 < text.length) {
