@@ -16,7 +16,7 @@ const Home = () => {
     const hasMounted = useRef(false)
     const [letters, setLetters] = useState('')
     const text =
-        ' uma boa presença online e profissional faz toda a diferença. É por isso que estou aqui! Olá, eu sou o Leão, desenvolvedor Front-End - em rumo ao Full Stack - experiênte com React, TypeScript, Python e SQL.'
+        ' Uma boa presença online e profissional faz toda a diferença. É por isso que estou aqui! Olá, eu sou o Leão, desenvolvedor Full Stack - experiênte com React, TypeScript, Python, MySQL, MongoDb e PostGresql.'
 
     useEffect(() => {
         setTimeout(() => {
@@ -63,12 +63,12 @@ const Home = () => {
                         <ul>
                             <li className="instagram button-borders">
                                 <a
-                                    href="https://www.instagram.com/leao_dev/"
+                                    href="https://github.com/lllleao"
                                     target="_blank"
                                     className="primary-button"
                                     rel="noreferrer"
                                 >
-                                    INSTAGRAM
+                                    GITHUB
                                 </a>
                             </li>
                             <li className="github button-borders">
@@ -97,7 +97,6 @@ const Home = () => {
                 <S.Message>
                     <h1>Lucas Leão</h1>
                     <S.Tip>
-                        <span className="tip">Dica rápida:</span>{' '}
                         <span className="tip-text">{letters}</span>
                     </S.Tip>
                 </S.Message>
