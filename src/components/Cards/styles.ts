@@ -20,6 +20,7 @@ export const CardBack = styled.div<Props>`
     p {
         text-align: justify;
         line-height: 2rem;
+        
     }
 
     @media (min-width: 768px) {

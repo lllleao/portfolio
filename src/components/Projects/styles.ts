@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const ProjectContainer = styled.section`
+    padding-top: 2rem;
     .projects-container {
         padding: 4rem 0;
         min-height: 100vh;
@@ -15,6 +16,9 @@ export const ProjectContainer = styled.section`
             height: 100%;
             width: 90%;
         }
+    }
+    @media screen and (max-width: 767px) {
+        height: 100%;
     }
 `
 export const Tags = styled.ul`

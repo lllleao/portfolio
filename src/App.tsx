@@ -1,16 +1,18 @@
 import { Provider } from 'react-redux'
-import NavBar from '@components/Aside'
 import Main from './containers/Main'
 import Global from './globalStyle'
 import store from './store'
 import Footer from '@components/Footer'
+import Background from '@components/Background'
+import Header from './containers/Header'
 
 function App() {
     return (
         <Provider store={store}>
             <Global />
+            <Background />
+            <Header />
             <Main />
-            <NavBar />
             <Footer />
         </Provider>
     )

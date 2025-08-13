@@ -1,11 +1,17 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
-type PropsContato = {
-    isInsideNumber: number
+type intersectionProps = {
+    home: boolean
+    about: boolean
+    projects: boolean
+    backdropMenu: boolean
 }
 
-const initialState: PropsContato = {
-    isInsideNumber: 0
+const initialState: intersectionProps = {
+    home: true,
+    about: false,
+    projects: false,
+    backdropMenu: true
 }
 
 const intersectionSlice = createSlice({
@@ -14,21 +20,36 @@ const intersectionSlice = createSlice({
     reducers: {
         home: (state, action: PayloadAction<boolean>) => {
             if (action.payload) {
-                state.isInsideNumber = 1
+                state.home = action.payload
+                state.about = false
+                state.projects = false
+            } else {
+                state.home = action.payload
             }
         },
         about: (state, action: PayloadAction<boolean>) => {
             if (action.payload) {
-                state.isInsideNumber = 48
+                state.about = action.payload
+                state.home = false
+                state.projects = false
+            } else {
+                state.about = action.payload
             }
         },
         projects: (state, action: PayloadAction<boolean>) => {
             if (action.payload) {
-                state.isInsideNumber = 95
+                state.projects = action.payload
+                state.home = false
+                state.about = false
+            } else {
+                state.projects = action.payload
             }
+        },
+        changeBackdropMenu: (state, action: PayloadAction<boolean>) => {
+            state.backdropMenu = action.payload
         }
     }
 })
 
-export const { home, about, projects } = intersectionSlice.actions
+export const { home, about, projects, changeBackdropMenu } = intersectionSlice.actions
 export default intersectionSlice.reducer

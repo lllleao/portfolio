@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { home } from '@store/reducers/intersection'
 
 import Slider from '@components/Slider'
@@ -9,37 +9,73 @@ import * as S from './styles'
 import avatar from '@images/perfil-fundo2.png'
 import cv from '@images/CV.pdf'
 import { useInView } from 'react-intersection-observer'
+import { RootReducer } from '@store/index'
 
 const Home = () => {
     const [cvDownload, setCvDownload] = useState(false)
     const { ref: myRef, inView } = useInView({ threshold: 0.2 })
-    const hasMounted = useRef(false)
+    const [finished, setFinished] = useState(false)
+    const [globalIndex, setGlobalIndex] = useState(0)
     const [letters, setLetters] = useState('')
-    const text =
-        ' uma boa presença online e profissional faz toda a diferença. É por isso que estou aqui! Olá, eu sou o Leão, desenvolvedor Front-End - em rumo ao Full Stack - experiênte com React, TypeScript, Python e SQL.'
+    const [globalIndexOfArray, setGlobalIndexOfArray] = useState(0)
+    const developmentControll = useRef(true)
+    const { home: homeView, about, projects } = useSelector(
+            (state: RootReducer) => state.intersection
+        )
+    const text = ['  Full Stack. ', ' TypeScript. ', ' Python. ']
 
     useEffect(() => {
-        setTimeout(() => {
-            if (!hasMounted.current) {
-                hasMounted.current = true
+        if (developmentControll.current) {
+            developmentControll.current = false
+            return undefined
+        }
+        if (!finished) {
+            setTimeout(() => {
                 let index = 0
-
-                const intervelId = setInterval(() => {
-                    if (index + 1 < text.length) {
-                        setLetters((prev) => prev + text[index])
+                const intervelType = setInterval(() => {
+                    if (
+                        index + 1 < text[globalIndexOfArray].length &&
+                        !finished
+                    ) {
+                        setLetters(
+                            (prev) => prev + text[globalIndexOfArray][index]
+                        )
                         index++
                     } else {
-                        clearInterval(intervelId)
+                        setGlobalIndex(index)
+                        setGlobalIndexOfArray((prev) => prev + 1)
+                        setFinished(true)
+                        clearInterval(intervelType)
                     }
-                }, 20)
-            }
-        }, 2000)
-    }, [])
+                }, 100)
+            }, 500)
+        }
+    }, [finished])
+
+    useEffect(() => {
+        if (finished) {
+            setTimeout(() => {
+                let index = globalIndex
+                const intervalDelete = setInterval(() => {
+                    if (index < 0) {
+                        if (globalIndexOfArray > text.length - 1) {
+                            setGlobalIndexOfArray(0)
+                        }
+                        setFinished(false)
+                        return clearInterval(intervalDelete)
+                    }
+                    index--
+                    setLetters((prev) => prev.slice(0, index))
+                }, 50)
+            }, 1000)
+        }
+    }, [finished])
 
     const dispatch = useDispatch()
     useEffect(() => {
+
         dispatch(home(inView))
-    }, [inView, dispatch])
+    }, [inView, dispatch, homeView, about, projects])
 
     const handleAnimation = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
         e.preventDefault()
@@ -63,12 +99,12 @@ const Home = () => {
                         <ul>
                             <li className="instagram button-borders">
                                 <a
-                                    href="https://www.instagram.com/leao_dev/"
+                                    href="https://github.com/lllleao"
                                     target="_blank"
                                     className="primary-button"
                                     rel="noreferrer"
                                 >
-                                    INSTAGRAM
+                                    GITHUB
                                 </a>
                             </li>
                             <li className="github button-borders">
@@ -95,11 +131,12 @@ const Home = () => {
                     </S.ProfileNav>
                 </S.Profile>
                 <S.Message>
-                    <h1>Lucas Leão</h1>
-                    <S.Tip>
-                        <span className="tip">Dica rápida:</span>{' '}
-                        <span className="tip-text">{letters}</span>
-                    </S.Tip>
+                    <p className="iam">Eu sou Lucas Leão</p>
+                    <S.Tipy>
+                        Sou Desenvolvedor{' '}
+                        <span className="typed-text">{letters}</span>
+                        <span className="vertical-bar">|</span>
+                    </S.Tipy>
                 </S.Message>
             </S.Hero>
             <Slider />

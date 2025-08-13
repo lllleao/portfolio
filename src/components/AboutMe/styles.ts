@@ -1,15 +1,30 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
+
+const comingLeft = keyframes`
+    from {
+            transform: translateX(-100px);
+    } to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+`
+
+const comingRight = keyframes`
+    from {
+            transform: translateX(100px);
+            opacity: 0;
+    } to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+`
 
 export const About = styled.section`
-    padding-top: 4rem;
+    padding: 3rem 0;
     height: 100vh;
-    @media (max-width: 767px) {
+    overflow: hidden;
+    @media screen and (max-width: 767px) {
         height: 100%;
-        padding-bottom: 4rem;
-    }
-    @media (max-height: 733px) {
-        height: 100%;
-        padding-bottom: 4rem;
     }
 `
 
@@ -21,17 +36,13 @@ export const Story = styled.div`
     line-height: 3rem;
     width: 90%;
 
-    .from-left {
+    .paragraph {
         opacity: 0;
-        &.is-active {
-            animation: comingLeft 2s 0.5s ease forwards;
+        &.is-active-left {
+            animation: ${comingLeft} 2s 0.5s ease forwards;
         }
-    }
-
-    .from-right {
-        opacity: 0;
-        &.is-active {
-            animation: comingRight 2s 0.5s ease forwards;
+        &.is-active-right {
+            animation: ${comingRight} 2s 0.5s ease forwards;
         }
     }
 `

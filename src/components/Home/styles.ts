@@ -1,21 +1,34 @@
-import { styled } from 'styled-components'
+import { keyframes, styled } from 'styled-components'
 
 type Props = {
     $download: boolean
 }
+const type = keyframes`
+    from {
+        opacity: 0.3;
+    }
+    to {
+        opacity: 1;
+    }
+`
+
+const coming = keyframes`
+    from {
+        transform: translateX(10%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+`
 
 export const HeroContainer = styled.section`
     height: 100vh;
+    padding-bottom: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
-    @media (max-width: 767px) {
-        height: 100%;
-    }
-    @media (min-width: 768px) and (max-height: 615px) {
-        height: 100%;
-    }
 `
 export const Hero = styled.div`
     display: flex;
@@ -23,7 +36,7 @@ export const Hero = styled.div`
     gap: 122px;
     align-items: center;
 
-    @media (max-width: 767px) {
+    @media (max-width: 948px) {
         flex-direction: column;
         justify-content: center;
         gap: 28px;
@@ -232,15 +245,17 @@ export const BntDownload = styled.li<Props>`
 `
 
 export const Message = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     max-width: 784px;
     width: 100%;
-
     margin-bottom: 28px;
     @media (max-width: 773px) and (max-height: 615px) {
         margin-bottom: 0;
         padding: 8px;
     }
-    h1 {
+    .iam {
         font-size: clamp(1.5rem, 3vw, 3rem);
         font-family: 'Philosopher';
         letter-spacing: 0.5rem;
@@ -248,13 +263,23 @@ export const Message = styled.div`
         text-align: center;
         margin-bottom: 1rem;
         text-shadow: 8px 8px 12px #000;
-        animation: coming 1s ease;
+        animation: ${coming} 1s ease;
+        overflow: hidden;
     }
 `
-export const Tip = styled.p`
-    font-size: 1.3rem;
-    font-size: clamp(1rem, 2vw, 1.3rem);
-    line-height: 3rem;
-    text-align: justify;
+export const Tipy = styled.p`
+    font-size: clamp(1rem, 4vw, 2rem);
     text-shadow: 8px 8px 12px #000;
+    .vertical-bar {
+        display: inline-block;
+        margin-left: 0.2rem;
+        animation: ${type} 0.3s infinite;
+        color: #eb2ac4;
+        font-size: clamp(1rem, 4vw, 2rem);
+        font-weight: bold;
+    }
+    .typed-text {
+        color: #eb2ac4;
+        font-weight: bold;
+    }
 `

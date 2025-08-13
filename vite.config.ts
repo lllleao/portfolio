@@ -11,5 +11,9 @@ export default defineConfig({
             '@interSection': '/src/utils',
             '@store': '/src/store'
         }
+    },
+    server: {
+        open: true,
+        host: true
     }
 })
