@@ -26,12 +26,15 @@ const Projects = () => {
         home,
         projects: projectsView
     } = useSelector((state: RootReducer) => state.intersection)
+    const { heightHeader } = useSelector(
+        (state: RootReducer) => state.intersection
+    )
 
     useEffect(() => {
         dispatch(projects(inView))
     }, [inView, dispatch, projectsView, about, home])
     return (
-        <S.ProjectContainer ref={myRef} id="projects">
+        <S.ProjectContainer $heightHeader={heightHeader} ref={myRef} id="projects">
             <div className="container">
                 <TitleSection>Projetos Recentes</TitleSection>
                 <div className="projects-container">

@@ -14,13 +14,16 @@ const AboutMe = () => {
         home,
         projects
     } = useSelector((state: RootReducer) => state.intersection)
+    const { heightHeader } = useSelector(
+        (state: RootReducer) => state.intersection
+    )
 
     useEffect(() => {
         dispatch(about(inView))
     }, [inView, dispatch, aboutView, home, projects])
 
     return (
-        <S.About id="about" ref={myRef}>
+        <S.About $heightHeader={heightHeader} id="about" ref={myRef}>
             <div className="container">
                 <TitleSection>Sobre mim</TitleSection>
                 <S.Story>

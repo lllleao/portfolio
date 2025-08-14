@@ -19,8 +19,8 @@ const comingRight = keyframes`
     }
 `
 
-export const About = styled.section`
-    padding: 3rem 0;
+export const About = styled.section<{$heightHeader: number}>`
+    padding-top: ${({$heightHeader}) => $heightHeader}px;
     height: 100vh;
     overflow: hidden;
     @media screen and (max-width: 767px) {
