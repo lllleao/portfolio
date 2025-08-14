@@ -12,18 +12,18 @@ import cv from '@images/CV.pdf'
 import { RootReducer } from '@store/index'
 
 const Home = () => {
+    const [textIndex, setTextIndex] = useState(0)
+    const [isDeleting, setIsDeleting] = useState(false)
+
+    const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+
     const { heightHeader } = useSelector(
         (state: RootReducer) => state.intersection
     )
     const [cvDownload, setCvDownload] = useState(false)
-    const [finished, setFinished] = useState(false)
-    const [globalIndex, setGlobalIndex] = useState(0)
     const [letters, setLetters] = useState('')
-    const [globalIndexOfArray, setGlobalIndexOfArray] = useState(0)
 
     const { ref: myRef, inView } = useInView({ threshold: 0.2 })
-
-    const developmentControll = useRef(true)
 
     const {
         home: homeView,
@@ -33,57 +33,48 @@ const Home = () => {
     const text = ['  Full Stack. ', ' TypeScript. ', ' Python. ']
 
     useEffect(() => {
-        if (developmentControll.current && import.meta.env.VITE_NOT_MOUNT) {
-            developmentControll.current = false
-            return undefined
-        }
-        if (!finished) {
-            setTimeout(() => {
-                let index = 0
-                const intervelType = setInterval(() => {
-                    if (
-                        index + 1 < text[globalIndexOfArray].length &&
-                        !finished
-                    ) {
-                        setLetters(
-                            (prev) => prev + text[globalIndexOfArray][index]
-                        )
-                        index++
-                    } else {
-                        setGlobalIndex(index)
-                        setGlobalIndexOfArray((prev) => prev + 1)
-                        setFinished(true)
-                        clearInterval(intervelType)
-                    }
-                }, 100)
-            }, 500)
-        }
-    }, [finished])
+        const currentText = text[textIndex]
+        const typeSpeed = isDeleting ? 50 : 100
+        const pauseAfterTyping = 1000
+        const pauseAfterDeleting = 500
 
-    useEffect(() => {
-        if (finished) {
-            setTimeout(() => {
-                let index = globalIndex
-                const intervalDelete = setInterval(() => {
-                    if (index < 0) {
-                        if (globalIndexOfArray > text.length - 1) {
-                            setGlobalIndexOfArray(0)
-                        }
-                        setFinished(false)
-                        return clearInterval(intervalDelete)
-                    }
-                    index--
-                    setLetters((prev) => prev.slice(0, index))
-                }, 50)
-            }, 1000)
+        const handleTyping = () => {
+            if (!isDeleting) {
+                if (letters.length < currentText.length) {
+                    setLetters(
+                        (current) => current + currentText[letters.length]
+                    )
+                    timeoutRef.current = setTimeout(handleTyping, typeSpeed)
+                } else {
+                    timeoutRef.current = setTimeout(
+                        () => setIsDeleting(true),
+                        pauseAfterTyping
+                    )
+                }
+            } else {
+                if (letters.length > 0) {
+                    setLetters((prev) => prev.slice(0, -1))
+                    timeoutRef.current = setTimeout(handleTyping, typeSpeed)
+                } else {
+                    timeoutRef.current = setTimeout(() => {
+                        setIsDeleting(false)
+                        setTextIndex((prev) => (prev + 1) % text.length)
+                    }, pauseAfterDeleting)
+                }
+            }
         }
-    }, [finished])
+
+        timeoutRef.current = setTimeout(handleTyping, typeSpeed)
+
+        return () => {
+            if (timeoutRef.current) clearTimeout(timeoutRef.current)
+        }
+    }, [letters, isDeleting, textIndex])
 
     const dispatch = useDispatch()
     useEffect(() => {
         dispatch(home(inView))
     }, [inView, dispatch, homeView, about, projects])
-
 
     const handleAnimation = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
         e.preventDefault()
@@ -100,7 +91,11 @@ const Home = () => {
     }
     return (
         <S.HeroContainer id="home">
-            <S.Hero $heightHeader={heightHeader} ref={myRef} className="container mt-profile">
+            <S.Hero
+                $heightHeader={heightHeader}
+                ref={myRef}
+                className="container mt-profile"
+            >
                 <S.Profile>
                     <img srcSet={avatar} alt="Leao Dev" />
                     <S.ProfileNav>
