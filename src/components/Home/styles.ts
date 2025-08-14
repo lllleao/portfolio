@@ -41,11 +41,11 @@ export const Hero = styled.div<{$heightHeader: number}>`
 
     &.container {
         margin-top: ${({$heightHeader}) => $heightHeader + 32}px;
+        @media (max-width: 949px) {
+            margin-bottom: 4rem;
+        }
     }
 
-    @media (max-width: 949px) {
-        margin-bottom: 4rem;
-    }
 
     @media (max-width: 948px) {
         flex-direction: column;
