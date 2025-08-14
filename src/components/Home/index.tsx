@@ -100,12 +100,10 @@ const Home = () => {
                             <li className="instagram button-borders">
                                 <a
                                     href="https://github.com/lllleao"
-                                    href="https://github.com/lllleao"
                                     target="_blank"
                                     className="primary-button"
                                     rel="noreferrer"
                                 >
-                                    GITHUB
                                     GITHUB
                                 </a>
                             </li>
