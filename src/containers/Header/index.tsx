@@ -8,13 +8,11 @@ import { updateHeightHeader } from '@store/reducers/intersection'
 
 const Header = () => {
     const { backdropMenu } = useSelector((state: RootReducer) => state.intersection)
-    const { heightHeader } = useSelector((state: RootReducer) => state.intersection)
     const header = useRef<HTMLHeadingElement>(null)
     const dispatch = useDispatch()
 
     useEffect(() => {
         if (!header.current) return
-        // console.log(header.current.clientHeight)
         dispatch(updateHeightHeader(header.current.clientHeight))
     }, [])
 
