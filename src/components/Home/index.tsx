@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { useInView } from 'react-intersection-observer'
 import { home } from '@store/reducers/intersection'
 
 import Slider from '@components/Slider'
@@ -8,24 +9,31 @@ import * as S from './styles'
 
 import avatar from '@images/perfil-fundo2.png'
 import cv from '@images/CV.pdf'
-import { useInView } from 'react-intersection-observer'
 import { RootReducer } from '@store/index'
 
 const Home = () => {
+    const { heightHeader } = useSelector(
+        (state: RootReducer) => state.intersection
+    )
     const [cvDownload, setCvDownload] = useState(false)
-    const { ref: myRef, inView } = useInView({ threshold: 0.2 })
     const [finished, setFinished] = useState(false)
     const [globalIndex, setGlobalIndex] = useState(0)
     const [letters, setLetters] = useState('')
     const [globalIndexOfArray, setGlobalIndexOfArray] = useState(0)
+
+    const { ref: myRef, inView } = useInView({ threshold: 0.2 })
+
     const developmentControll = useRef(true)
-    const { home: homeView, about, projects } = useSelector(
-            (state: RootReducer) => state.intersection
-        )
+
+    const {
+        home: homeView,
+        about,
+        projects
+    } = useSelector((state: RootReducer) => state.intersection)
     const text = ['  Full Stack. ', ' TypeScript. ', ' Python. ']
 
     useEffect(() => {
-        if (developmentControll.current) {
+        if (developmentControll.current && import.meta.env.VITE_NOT_MOUNT) {
             developmentControll.current = false
             return undefined
         }
@@ -73,9 +81,9 @@ const Home = () => {
 
     const dispatch = useDispatch()
     useEffect(() => {
-
         dispatch(home(inView))
     }, [inView, dispatch, homeView, about, projects])
+
 
     const handleAnimation = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
         e.preventDefault()
@@ -91,8 +99,8 @@ const Home = () => {
         }, 4000)
     }
     return (
-        <S.HeroContainer id="home" ref={myRef}>
-            <S.Hero className="container">
+        <S.HeroContainer id="home">
+            <S.Hero $heightHeader={heightHeader} ref={myRef} className="container mt-profile">
                 <S.Profile>
                     <img srcSet={avatar} alt="Leao Dev" />
                     <S.ProfileNav>

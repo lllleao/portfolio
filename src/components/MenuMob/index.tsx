@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { MenuBobContainer } from './styles'
 import { useDispatch, useSelector } from 'react-redux'
 import { changeBackdropMenu } from '@store/reducers/intersection'

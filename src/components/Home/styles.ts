@@ -3,6 +3,7 @@ import { keyframes, styled } from 'styled-components'
 type Props = {
     $download: boolean
 }
+
 const type = keyframes`
     from {
         opacity: 0.3;
@@ -29,16 +30,22 @@ export const HeroContainer = styled.section`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    @media screen and (max-width: 1024px){
+        /* padding-top: 5rem; */
+        /* height: 100%; */
+    }
 `
-export const Hero = styled.div`
+export const Hero = styled.div<{$heightHeader: number}>`
     display: flex;
-    height: 100%;
     gap: 122px;
     align-items: center;
 
+    &.container {
+        margin-top: ${({$heightHeader}) => $heightHeader + 32}px;
+    }
+
     @media (max-width: 948px) {
         flex-direction: column;
-        justify-content: center;
         gap: 28px;
     }
 `
@@ -61,6 +68,7 @@ export const Profile = styled.div`
         }
     }
 `
+
 export const ProfileNav = styled.nav`
     margin-top: 32px;
     ul {

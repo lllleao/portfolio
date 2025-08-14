@@ -47,8 +47,12 @@ export const MenuBobContainer = styled.div`
         top: 0;
         width: 100vw;
         height: 100vh;
-        z-index: 2;
+        transform: translateX(100%);
+        transition: transform 0.3s;
+
+        z-index: 1;
         &.active-menu-aside-backdrop {
+            transform: translateX(0);
             backdrop-filter: blur(10px);
         }
 

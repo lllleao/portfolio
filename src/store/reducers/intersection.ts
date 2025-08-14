@@ -5,13 +5,15 @@ type intersectionProps = {
     about: boolean
     projects: boolean
     backdropMenu: boolean
+    heightHeader: number
 }
 
 const initialState: intersectionProps = {
     home: true,
     about: false,
     projects: false,
-    backdropMenu: true
+    backdropMenu: true,
+    heightHeader: 0
 }
 
 const intersectionSlice = createSlice({
@@ -47,9 +49,12 @@ const intersectionSlice = createSlice({
         },
         changeBackdropMenu: (state, action: PayloadAction<boolean>) => {
             state.backdropMenu = action.payload
+        },
+        updateHeightHeader: (state, action: PayloadAction<number>) => {
+            state.heightHeader = action.payload
         }
     }
 })
 
-export const { home, about, projects, changeBackdropMenu } = intersectionSlice.actions
+export const { home, about, projects, changeBackdropMenu, updateHeightHeader } = intersectionSlice.actions
 export default intersectionSlice.reducer
