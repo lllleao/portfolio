@@ -20,7 +20,7 @@ export const CardBack = styled.div<Props>`
     p {
         text-align: justify;
         line-height: 2rem;
-        
+
     }
 
     @media (min-width: 768px) {
@@ -41,6 +41,8 @@ export const CardBack = styled.div<Props>`
 `
 
 export const CardFront = styled.div`
+    position: relative;
+
     padding: 1.5rem 1rem;
     background-color: #0d0d0d;
     width: 100%;
@@ -131,6 +133,9 @@ export const ContainerFlip = styled.div`
     flex: 0 1 calc(50% - 64px);
     transition: transform 1s;
     perspective: 1000px;
+    .d-none {
+        display: none;
+    }
 `
 
 export const Card = styled.div<{ $isFlipped: boolean }>`
