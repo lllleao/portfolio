@@ -20,6 +20,10 @@ const Global = createGlobalStyle`
         scroll-behavior: smooth;
     }
 
+    body {
+        background-color: #2b0b39;
+    }
+
     .container {
         max-width: 1312px;
         width: 90%;
@@ -82,7 +86,7 @@ const Global = createGlobalStyle`
         }
     }
 
-    
+
 `
 
 export default Global
