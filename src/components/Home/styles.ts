@@ -30,9 +30,8 @@ export const HeroContainer = styled.section`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    @media screen and (max-width: 1024px){
-        /* padding-top: 5rem; */
-        /* height: 100%; */
+    @media screen and (max-width: 949px){
+        height: 100%;
     }
 `
 export const Hero = styled.div<{$heightHeader: number}>`
@@ -42,6 +41,10 @@ export const Hero = styled.div<{$heightHeader: number}>`
 
     &.container {
         margin-top: ${({$heightHeader}) => $heightHeader + 32}px;
+    }
+
+    @media (max-width: 949px) {
+        margin-bottom: 2rem;
     }
 
     @media (max-width: 948px) {
