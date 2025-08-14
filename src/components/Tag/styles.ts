@@ -7,6 +7,7 @@ export const TagContainer = styled.li`
     color: #fff;
     &.tag-type-project {
         position: absolute;
+        z-index: 1;
         top: 1rem;
         left: 1rem;
     }
