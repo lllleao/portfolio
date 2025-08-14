@@ -44,7 +44,7 @@ export const Hero = styled.div<{$heightHeader: number}>`
     }
 
     @media (max-width: 949px) {
-        margin-bottom: 2rem;
+        margin-bottom: 4rem;
     }
 
     @media (max-width: 948px) {
