@@ -31,7 +31,7 @@ export const About = styled.section<{$heightHeader: number}>`
 export const Story = styled.div`
     margin: 0 auto;
     color: #fff;
-    font-size: clamp(0.9rem, 2vw, 1.2rem);
+    font-size: clamp(1rem, 2vw, 1.3rem);
     text-align: justify;
     line-height: 3rem;
     width: 90%;

@@ -28,27 +28,22 @@ const AboutMe = () => {
                 <TitleSection>Sobre mim</TitleSection>
                 <S.Story>
                     <p className={`paragraph ${inView && 'is-active-left'}`}>
-                        Meu nome é Lucas Leão. Sou formado em Filosofia pela
-                        Universidade Federal do Ceará (UFC) e concluí uma
-                        formação técnica pela EBAC (Escola Britânica de Artes
-                        Criativas e Tecnologia) em Desenvolvedor Full Stack
-                        Python. Ao longo da minha trajetória, desenvolvi
-                        projetos acadêmicos e comerciais que exigiram
-                        criatividade e habilidades técnicas. Entre eles estão o
-                        site de uma editora cooperativa, uma agenda de contatos,
-                        landing pages e o frontend de um e-commerce. Esses
-                        projetos me permitiram aprimorar minhas capacidades de
-                        resolução de problemas e de aplicação prática de
-                        tecnologias relacionadas ao desenvolvimento Full Stack.
+                        Dica rápida: <strong>uma presença online forte é essencial para
+                        destacar sua marca.</strong> <br />Meu nome é Lucas Leão e sou
+                        Desenvolvedor Full Stack formado pela EBAC (Escola
+                        Britânica de Artes Criativas e Tecnologia). Ao longo da
+                        minha trajetória, já desenvolvi projetos que uniram
+                        criatividade e conhecimento técnico, entregando soluções
+                        eficientes para diferentes tipos de negócios.
                     </p>
                     <br />
                     <p className={`paragraph ${inView && 'is-active-right'}`}>
-                        Adoro enfrentar problemas complexos, seja trabalhando em
-                        equipe ou individualmente. Também me destaco em
-                        ambientes dinâmicos, repletos de tarefas que não
-                        permitem acomodação, pois isso me proporciona a
-                        oportunidade de desenvolver constantemente minhas
-                        habilidades.
+                        Tenho experiência em desenvolvimento de sites, landing
+                        pages e e-commerces, criando plataformas funcionais e
+                        intuitivas que ajudam empresas a crescer e se conectar
+                        com seus clientes. Já colaborei com clientes que vão
+                        desde editoras cooperativas até startups de design,
+                        sempre focando em qualidade, performance e usabilidade.
                     </p>
                 </S.Story>
             </div>
