@@ -19,13 +19,10 @@ const comingRight = keyframes`
     }
 `
 
-export const About = styled.section<{$heightHeader: number}>`
-    padding-top: ${({$heightHeader}) => $heightHeader}px;
-    height: 100vh;
+export const About = styled.section<{ $heightHeader: number }>`
+    padding-top: ${({ $heightHeader }) => $heightHeader}px;
+    min-height: 100vh;
     overflow: hidden;
-    @media screen and (max-width: 767px) {
-        height: 100%;
-    }
 `
 
 export const Story = styled.div`

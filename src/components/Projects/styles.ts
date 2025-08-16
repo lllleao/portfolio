@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
-export const ProjectContainer = styled.section<{$heightHeader: number}>`
-    padding-top: ${({$heightHeader}) => $heightHeader}px;
+export const ProjectContainer = styled.section<{ $heightHeader: number }>`
+    padding-top: ${({ $heightHeader }) => $heightHeader}px;
     .projects-container {
         padding: 4rem 0;
         min-height: 100vh;

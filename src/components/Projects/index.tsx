@@ -34,7 +34,11 @@ const Projects = () => {
         dispatch(projects(inView))
     }, [inView, dispatch, projectsView, about, home])
     return (
-        <S.ProjectContainer $heightHeader={heightHeader} ref={myRef} id="projects">
+        <S.ProjectContainer
+            $heightHeader={heightHeader}
+            ref={myRef}
+            id="projects"
+        >
             <div className="container">
                 <TitleSection>Projetos Recentes</TitleSection>
                 <div className="projects-container">
@@ -55,7 +59,10 @@ const Projects = () => {
                                 <Tag>NestJs</Tag>
                                 <Tag>MySql</Tag>
                                 <Tag>RTK Query</Tag>
-                                <Tag typeOfProject isFullstack>Full Stack</Tag>
+                                <Tag>React Redux</Tag>
+                                <Tag typeOfProject isFullstack>
+                                    Full Stack
+                                </Tag>
                             </S.Tags>
                         }
                     />
@@ -72,8 +79,10 @@ const Projects = () => {
                                 <Tag>Styled-Components</Tag>
                                 <Tag>React Redux</Tag>
                                 <Tag>React Router</Tag>
-                                <Tag>Api</Tag>
-                                <Tag typeOfProject isFrontend>Front End</Tag>
+                                <Tag>RTK Query</Tag>
+                                <Tag typeOfProject isFrontend>
+                                    Front End
+                                </Tag>
                             </S.Tags>
                         }
                     />
@@ -90,7 +99,9 @@ const Projects = () => {
                                 <Tag>Styled-Components</Tag>
                                 <Tag>DRF</Tag>
                                 <Tag>SQLlite</Tag>
-                                <Tag typeOfProject isFullstack>Full Stack</Tag>
+                                <Tag typeOfProject isFullstack>
+                                    Full Stack
+                                </Tag>
                             </S.Tags>
                         }
                     />
@@ -106,7 +117,9 @@ const Projects = () => {
                                 <Tag>TypeScript</Tag>
                                 <Tag>Styled-Components</Tag>
                                 <Tag>React Redux</Tag>
-                                <Tag typeOfProject isFrontend>Front End</Tag>
+                                <Tag typeOfProject isFrontend>
+                                    Front End
+                                </Tag>
                             </S.Tags>
                         }
                     />
@@ -122,7 +135,9 @@ const Projects = () => {
                                 <Tag>HTML</Tag>
                                 <Tag>CSS</Tag>
                                 <Tag>BootStrap</Tag>
-                                <Tag typeOfProject isFrontend>Front End</Tag>
+                                <Tag typeOfProject isFrontend>
+                                    Front End
+                                </Tag>
                             </S.Tags>
                         }
                     />
@@ -140,8 +155,10 @@ const Projects = () => {
                                 <Tag>Styled-Components</Tag>
                                 <Tag>React Redux</Tag>
                                 <Tag>React Router</Tag>
-                                <Tag>Api</Tag>
-                                <Tag typeOfProject isFrontend>Front End</Tag>
+                                <Tag>RTK Query</Tag>
+                                <Tag typeOfProject isFrontend>
+                                    Front End
+                                </Tag>
                             </S.Tags>
                         }
                     />
@@ -157,7 +174,9 @@ const Projects = () => {
                                 <Tag>HTML</Tag>
                                 <Tag>CSS</Tag>
                                 <Tag>JQuery</Tag>
-                                <Tag typeOfProject isFrontend>Front End</Tag>
+                                <Tag typeOfProject isFrontend>
+                                    Front End
+                                </Tag>
                             </S.Tags>
                         }
                     />
@@ -175,7 +194,9 @@ const Projects = () => {
                                 <Tag>Gulp</Tag>
                                 <Tag>Sass</Tag>
                                 <Tag>JavaScript</Tag>
-                                <Tag typeOfProject isFrontend>Front End</Tag>
+                                <Tag typeOfProject isFrontend>
+                                    Front End
+                                </Tag>
                             </S.Tags>
                         }
                     />

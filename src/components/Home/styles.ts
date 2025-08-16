@@ -25,27 +25,21 @@ const coming = keyframes`
 `
 
 export const HeroContainer = styled.section`
-    height: 100vh;
+    min-height: 100vh;
     padding-bottom: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    @media screen and (max-width: 949px){
-        height: 100%;
-    }
 `
-export const Hero = styled.div<{$heightHeader: number}>`
+export const Hero = styled.div<{ $heightHeader: number }>`
     display: flex;
     gap: 122px;
     align-items: center;
 
     &.container {
-        margin-top: ${({$heightHeader}) => $heightHeader + 32}px;
-        @media (max-width: 949px) {
-            margin-bottom: 4rem;
-        }
+        margin-bottom: 4rem;
+        margin-top: ${({ $heightHeader }) => $heightHeader + 16}px;
     }
-
 
     @media (max-width: 948px) {
         flex-direction: column;
