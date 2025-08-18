@@ -12,7 +12,6 @@ import eplay from '@images/projects/eplay.png'
 import agenda from '@images/projects/agenda-contatos.png'
 import cineLanding from '@images/projects/cine-landing.png'
 import restEcommerce from '@images/projects/rest-commerce.png'
-import todoList from '@images/projects/todo-list.png'
 import amelie from '@images/projects/amelie.jpg'
 import fakeRede from '@images/projects/fake_rede.png'
 import { useInView } from 'react-intersection-observer'
@@ -213,7 +212,7 @@ const Projects = () => {
                             </S.Tags>
                         }
                     />
-                    
+
                 </div>
             </div>
         </S.ProjectContainer>
