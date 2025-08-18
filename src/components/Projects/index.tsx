@@ -7,6 +7,7 @@ import Card from '@components/Cards'
 import * as S from './styles'
 
 import cidadeClipse from '@images/projects/fotoP.png'
+import marvel from '@images/projects/marvel.png'
 import eplay from '@images/projects/eplay.png'
 import agenda from '@images/projects/agenda-contatos.png'
 import cineLanding from '@images/projects/cine-landing.png'
@@ -92,6 +93,29 @@ const Projects = () => {
                         }
                     />
                     <Card
+                        description="Uma Single Page Application (SPA) que consome dados da API da Marvel para exibir quadrinhos, permitindo que o usuário veja detalhes de cada um e gerencie um carrinho de compras.
+                            Desenvolvido com React + TypeScript + Vite e testado com Cypress."
+                        alt="Marvel"
+                        site="https://neoapp-one.vercel.app/"
+                        github="https://github.com/lllleao/neoapp"
+                        image={marvel}
+                        tags={
+                            <S.Tags>
+                                <Tag>React</Tag>
+                                <Tag>TypeScript</Tag>
+                                <Tag>Styled-Components</Tag>
+                                <Tag>RTK Query</Tag>
+                                <Tag>React Redux</Tag>
+                                <Tag>React Router</Tag>
+                                <Tag>Cypress</Tag>
+                                <Tag>Docker</Tag>
+                                <Tag typeOfProject isFrontend>
+                                    Full Stack
+                                </Tag>
+                            </S.Tags>
+                        }
+                    />
+                    <Card
                         description="Este é o frontend e o backend de um clone simplificado do Twitter, desenvolvido com React 19, Vite, TypeScript e DRF. Ele consome uma API REST desenvolvida com Django e oferece uma interface amigável para os usuários interagirem com o sistema."
                         alt="Rede Social Fake"
                         site="https://fake-social-network.vercel.app/"
@@ -114,17 +138,19 @@ const Projects = () => {
                         }
                     />
                     <Card
-                        description="A aplicação se trata de uma agenda de contatos, nela, podemos adicionar, deletar e filtrar contatos. Com um layout responsivo, essa aplicação foi um objeto de estudos, um desafio, que eu consegui concluir com orgulho."
-                        alt="Agenda de Contatos"
-                        site="https://contatos-weld.vercel.app/"
-                        github="https://github.com/lllleao/contatos"
-                        image={agenda}
+                        description="Aplicação de um ecommerce fictício. Ela lista restaurantes, ao escolher um, o usuário é direcionado ao cardápio do mesmo. É possível ver o preço e informações de cada prato e simular um pedido."
+                        alt="Restaurante fictício Ecommerce"
+                        site="https://efood-umber-kappa.vercel.app/"
+                        github="https://github.com/lllleao/efood"
+                        image={restEcommerce}
                         tags={
                             <S.Tags>
                                 <Tag>React</Tag>
                                 <Tag>TypeScript</Tag>
                                 <Tag>Styled-Components</Tag>
                                 <Tag>React Redux</Tag>
+                                <Tag>React Router</Tag>
+                                <Tag>RTK Query</Tag>
                                 <Tag typeOfProject isFrontend>
                                     Front End
                                 </Tag>
@@ -151,44 +177,23 @@ const Projects = () => {
                     />
 
                     <Card
-                        description="Aplicação de um ecommerce fictício. Ela lista restaurantes, ao escolher um, o usuário é direcionado ao cardápio do mesmo. É possível ver o preço e informações de cada prato e simular um pedido."
-                        alt="Restaurante fictício Ecommerce"
-                        site="https://efood-umber-kappa.vercel.app/"
-                        github="https://github.com/lllleao/efood"
-                        image={restEcommerce}
+                        description="A aplicação se trata de uma agenda de contatos, nela, podemos adicionar, deletar e filtrar contatos. Com um layout responsivo, essa aplicação foi um objeto de estudos, um desafio, que eu consegui concluir com orgulho."
+                        alt="Agenda de Contatos"
+                        site="https://contatos-weld.vercel.app/"
+                        github="https://github.com/lllleao/contatos"
+                        image={agenda}
                         tags={
                             <S.Tags>
                                 <Tag>React</Tag>
                                 <Tag>TypeScript</Tag>
                                 <Tag>Styled-Components</Tag>
                                 <Tag>React Redux</Tag>
-                                <Tag>React Router</Tag>
-                                <Tag>RTK Query</Tag>
                                 <Tag typeOfProject isFrontend>
                                     Front End
                                 </Tag>
                             </S.Tags>
                         }
                     />
-
-                    <Card
-                        description="Aplicação se trata de uma lista de tarefas com armazenamento local, ou seja, as tarefas registradas são guardadas na memória do navegador. Nela, Podemos configurar a urgência da tarefa, adicionar novas e deletar antigas. Além disso, podemos customizar com nosso próprio nome."
-                        alt="Lista de tarefas"
-                        site="https://lista-tarefas-ebac.vercel.app/"
-                        github="https://github.com/lllleao/lista-tarefas-ebac"
-                        image={todoList}
-                        tags={
-                            <S.Tags>
-                                <Tag>HTML</Tag>
-                                <Tag>CSS</Tag>
-                                <Tag>JQuery</Tag>
-                                <Tag typeOfProject isFrontend>
-                                    Front End
-                                </Tag>
-                            </S.Tags>
-                        }
-                    />
-
                     <Card
                         description="O projeto trata-se de uma landing page sobre um dos meus filmes favoritos: O Fabuloso Destino de Amélie Poulain. Foi feito como um projeto pessoal para treinar os conhecimentos que adquiri."
                         alt="Amélie Poulain"
@@ -208,6 +213,7 @@ const Projects = () => {
                             </S.Tags>
                         }
                     />
+                    
                 </div>
             </div>
         </S.ProjectContainer>
