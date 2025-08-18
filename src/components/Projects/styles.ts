@@ -13,12 +13,7 @@ export const ProjectContainer = styled.section<{ $heightHeader: number }>`
 
         @media (max-width: 767px) {
             display: block;
-            height: 100%;
-            width: 90%;
         }
-    }
-    @media screen and (max-width: 767px) {
-        height: 100%;
     }
 `
 export const Tags = styled.ul`

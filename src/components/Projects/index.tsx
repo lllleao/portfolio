@@ -60,6 +60,10 @@ const Projects = () => {
                                 <Tag>MySql</Tag>
                                 <Tag>RTK Query</Tag>
                                 <Tag>React Redux</Tag>
+                                <Tag>React Router</Tag>
+                                <Tag>Cypress</Tag>
+                                <Tag>Jest</Tag>
+                                <Tag>CI/CD</Tag>
                                 <Tag typeOfProject isFullstack>
                                     Full Stack
                                 </Tag>
@@ -99,6 +103,9 @@ const Projects = () => {
                                 <Tag>Styled-Components</Tag>
                                 <Tag>DRF</Tag>
                                 <Tag>SQLlite</Tag>
+                                <Tag>Docker</Tag>
+                                <Tag>React Router</Tag>
+                                <Tag>CI/CD</Tag>
                                 <Tag typeOfProject isFullstack>
                                     Full Stack
                                 </Tag>
