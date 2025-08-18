@@ -64,6 +64,7 @@ const Projects = () => {
                                 <Tag>Cypress</Tag>
                                 <Tag>Jest</Tag>
                                 <Tag>CI/CD</Tag>
+                                <Tag>Docker</Tag>
                                 <Tag typeOfProject isFullstack>
                                     Full Stack
                                 </Tag>
