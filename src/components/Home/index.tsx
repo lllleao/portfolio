@@ -8,7 +8,6 @@ import Slider from '@components/Slider'
 import * as S from './styles'
 
 import avatar from '@images/perfil-fundo2.png'
-import cv from '@images/CV.pdf'
 import { RootReducer } from '@store/index'
 
 const Home = () => {
