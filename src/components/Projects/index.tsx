@@ -65,6 +65,8 @@ const Projects = () => {
                                 <Tag>Jest</Tag>
                                 <Tag>CI/CD</Tag>
                                 <Tag>Docker</Tag>
+                                <Tag>Oracle Cloud</Tag>
+                                <Tag>Nginx</Tag>
                                 <Tag typeOfProject isFullstack>
                                     Full Stack
                                 </Tag>
@@ -108,6 +110,8 @@ const Projects = () => {
                                 <Tag>React Router</Tag>
                                 <Tag>Cypress</Tag>
                                 <Tag>Docker</Tag>
+                                <Tag>Nginx</Tag>
+
                                 <Tag typeOfProject isFrontend>
                                     Full Stack
                                 </Tag>

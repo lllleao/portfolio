@@ -30,7 +30,7 @@ const Home = () => {
         about,
         projects
     } = useSelector((state: RootReducer) => state.intersection)
-    const text = ['  Full Stack. ', ' TypeScript. ', ' Python. ']
+    const text = ['  Front End. ', ' Back End. ', ' Full Stack. ', ' Python. ', ' TypeScript. ']
 
     useEffect(() => {
         const currentText = text[textIndex]
@@ -82,7 +82,7 @@ const Home = () => {
         setTimeout(() => {
             setCvDownload(false)
             const link = document.createElement('a')
-            link.href = cv
+            link.href = 'https://github.com/lllleao/servidor_estatico/raw/main/CVit.pdf'
             link.download = 'cv.pdf'
             link.click()
             document.body.appendChild(link)
@@ -125,7 +125,7 @@ const Home = () => {
                                 $download={cvDownload}
                                 onClick={(e) => handleAnimation(e)}
                             >
-                                <a href={cv} target="_blank" rel="noreferrer">
+                                <a target="_blank" rel="noreferrer">
                                     <i className="fa-solid fa-file-arrow-down"></i>
                                     Currículo
                                 </a>

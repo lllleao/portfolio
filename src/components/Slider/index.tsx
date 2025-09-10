@@ -5,31 +5,61 @@ const Slider = () => {
         <S.Skills>
             <div className="techs">
                 <i className="devicon-javascript-plain colored"></i>
+
+                <i className="devicon-nginx-original colored"></i>
+
+                <i className="devicon-docker-plain colored"></i>
+
                 <i className="devicon-react-original-wordmark colored"></i>
                 <i className="devicon-css3-plain-wordmark colored"></i>
                 <i className="devicon-typescript-plain colored"></i>
                 <i className="devicon-nodejs-plain-wordmark colored"></i>
                 <i className="devicon-javascript-plain colored"></i>
+
+                <i className="devicon-nginx-original colored"></i>
+
+                <i className="devicon-docker-plain colored"></i>
+
                 <i className="devicon-react-original-wordmark colored"></i>
                 <i className="devicon-css3-plain-wordmark colored"></i>
                 <i className="devicon-typescript-plain colored"></i>
                 <i className="devicon-nodejs-plain-wordmark colored"></i>
                 <i className="devicon-javascript-plain colored"></i>
+
+                <i className="devicon-nginx-original colored"></i>
+
+                <i className="devicon-docker-plain colored"></i>
+
                 <i className="devicon-react-original-wordmark colored"></i>
                 <i className="devicon-css3-plain-wordmark colored"></i>
                 <i className="devicon-typescript-plain colored"></i>
                 <i className="devicon-nodejs-plain-wordmark colored"></i>
                 <i className="devicon-javascript-plain colored"></i>
+
+                <i className="devicon-nginx-original colored"></i>
+
+                <i className="devicon-docker-plain colored"></i>
+
                 <i className="devicon-react-original-wordmark colored"></i>
                 <i className="devicon-css3-plain-wordmark colored"></i>
                 <i className="devicon-typescript-plain colored"></i>
                 <i className="devicon-nodejs-plain-wordmark colored"></i>
                 <i className="devicon-javascript-plain colored"></i>
+
+                <i className="devicon-nginx-original colored"></i>
+
+                <i className="devicon-docker-plain colored"></i>
+
                 <i className="devicon-react-original-wordmark colored"></i>
                 <i className="devicon-css3-plain-wordmark colored"></i>
                 <i className="devicon-typescript-plain colored"></i>
                 <i className="devicon-nodejs-plain-wordmark colored"></i>
                 <i className="devicon-javascript-plain colored"></i>
+
+                <i className="devicon-nginx-original colored"></i>
+
+                <i className="devicon-docker-plain colored"></i>
+
                 <i className="devicon-react-original-wordmark colored"></i>
                 <i className="devicon-css3-plain-wordmark colored"></i>
                 <i className="devicon-typescript-plain colored"></i>
@@ -37,31 +67,61 @@ const Slider = () => {
             </div>
             <div className="techs">
                 <i className="devicon-javascript-plain colored"></i>
+
+                <i className="devicon-nginx-original colored"></i>
+
+                <i className="devicon-docker-plain colored"></i>
+
                 <i className="devicon-react-original-wordmark colored"></i>
                 <i className="devicon-css3-plain-wordmark colored"></i>
                 <i className="devicon-typescript-plain colored"></i>
                 <i className="devicon-nodejs-plain-wordmark colored"></i>
                 <i className="devicon-javascript-plain colored"></i>
+
+                <i className="devicon-nginx-original colored"></i>
+
+                <i className="devicon-docker-plain colored"></i>
+
                 <i className="devicon-react-original-wordmark colored"></i>
                 <i className="devicon-css3-plain-wordmark colored"></i>
                 <i className="devicon-typescript-plain colored"></i>
                 <i className="devicon-nodejs-plain-wordmark colored"></i>
                 <i className="devicon-javascript-plain colored"></i>
+
+                <i className="devicon-nginx-original colored"></i>
+
+                <i className="devicon-docker-plain colored"></i>
+
                 <i className="devicon-react-original-wordmark colored"></i>
                 <i className="devicon-css3-plain-wordmark colored"></i>
                 <i className="devicon-typescript-plain colored"></i>
                 <i className="devicon-nodejs-plain-wordmark colored"></i>
                 <i className="devicon-javascript-plain colored"></i>
+
+                <i className="devicon-nginx-original colored"></i>
+
+                <i className="devicon-docker-plain colored"></i>
+
                 <i className="devicon-react-original-wordmark colored"></i>
                 <i className="devicon-css3-plain-wordmark colored"></i>
                 <i className="devicon-typescript-plain colored"></i>
                 <i className="devicon-nodejs-plain-wordmark colored"></i>
                 <i className="devicon-javascript-plain colored"></i>
+
+                <i className="devicon-nginx-original colored"></i>
+
+                <i className="devicon-docker-plain colored"></i>
+
                 <i className="devicon-react-original-wordmark colored"></i>
                 <i className="devicon-css3-plain-wordmark colored"></i>
                 <i className="devicon-typescript-plain colored"></i>
                 <i className="devicon-nodejs-plain-wordmark colored"></i>
                 <i className="devicon-javascript-plain colored"></i>
+
+                <i className="devicon-nginx-original colored"></i>
+
+                <i className="devicon-docker-plain colored"></i>
+
                 <i className="devicon-react-original-wordmark colored"></i>
                 <i className="devicon-css3-plain-wordmark colored"></i>
                 <i className="devicon-typescript-plain colored"></i>
